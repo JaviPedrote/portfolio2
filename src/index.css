@@ -5,3 +5,10 @@
 body{
     background-color: #111827;
 }
+
+.imagen-difuminada {
+  width: 50%;
+  height: auto;
+  mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 80%, rgba(17, 24, 39, 0) 100%);
+  -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 80%, rgba(17, 24, 39, 0) 100%);
+}
