@@ -4,13 +4,13 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const projects = [
-    { name: "Proyecto 1", link: "https://enlace-a-proyecto-1.com" },
+    { name: "Proyecto 1", link: "https://simulacros.vercel.app/" },
     { name: "Proyecto 2", link: "https://enlace-a-proyecto-2.com" },
     { name: "Proyecto 3", link: "https://enlace-a-proyecto-3.com" },
   ];
 
   return (
-    <nav className="bg-gray-800 fixed w-full top-0 z-50 h-18">
+    <nav className="bg-gray-800 flex fixed w-full top-0 z-50 h-16">
       <div className="container mx-auto flex justify-between items-center p-4">
         <div className="text-2xl font-bold text-green-500">Mi Portafolio</div>
         <div className="relative">
