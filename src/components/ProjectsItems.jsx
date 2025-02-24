@@ -13,23 +13,33 @@ export const ProjectsItems = () => {
         autoplay: true,
         speed: 4000,
         cssEase: "linear",
+        // responsive: [
+        //     {
+        //         breakpoint: 1024,
+        //         settings: {
+        //             arrows: false,
+        //         }
+        //     },
+        // ]
     };
     return (
-        <div className="w-full flex justify-center items-center lg:mt-24 h-24">
+        <div className="w-full flex flex-col justify-center items-center lg:mt-16 h-36 outline">
 
+            <h1 className="text-white text-center mb-2 text-2xl font-bold">Proyectos</h1>
 
-            <div className="relative slider-container w-[95vw] lg:w-[600px] rounded-lg h-full">
+            <div className="relative slider-container w-[95vw] lg:w-[600px] rounded-lg h-36 outline">
                 {/* Sombra izquierda */}
-                <div className="z-10 absolute left-0 top-0 h-full w-32 bg-gradient-to-r from-gray-900 to-transparent pointer-events-none"></div>
+                <div className="z-10 absolute left-0 top-0 h-full w-32 bg-gradient-to-r from-gray-900 to-transparent pointer-events-none "></div>
                 <Slider {...settings}>
+
                     <div className="px-0.5 lg:px-1 cursor-pointer">
-                        <a href="https://simulacros.vercel.app/" className="focus:outline-none focus:border-none"><img src={img1} className="rounded-lg h-[10vh] object-cover" alt="imagen" /></a>
+                        <a href="https://simulacros.vercel.app/" className="focus:outline-none focus:border-none"><img src={img1} className="rounded-lg h-[13vh] object-cover" alt="imagen" /></a>
                     </div>
                     <div className="px-0.5 lg:px-1 cursor-pointer focus:outline-none focus:border-none">
-                        <a href="https://simulacros.vercel.app/" className="focus:outline-none focus:border-none"><img src={img1} className="rounded-lg h-[10vh] object-cover" alt="imagen" /></a>
+                        <a href="https://simulacros.vercel.app/" className="focus:outline-none focus:border-none"><img src={img1} className="rounded-lg h-[13vh] object-cover" alt="imagen" /></a>
                     </div>
                     <div className="px-0.5 lg:px-1 cursor-pointer focus:outline-none">
-                        <a href="https://simulacros.vercel.app/" className="focus:outline-none focus:border-none"><img src={img1} className="rounded-lg h-[10vh] object-cover" alt="imagen" /></a>
+                        <a href="https://simulacros.vercel.app/" className="focus:outline-none focus:border-none"><img src={img1} className="rounded-lg h-[13vh] object-cover" alt="imagen" /></a>
                     </div>
                 </Slider>
                 {/* Sombra derecha */}

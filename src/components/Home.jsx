@@ -20,8 +20,9 @@ function Home() {
         <ul className="list-disc  text-gray-400 text-lg text-left ml-10">
           <li><span className="text-green-500">HTML5</span> y <span className="text-green-500 font-medium">CSS3</span>: Fundamentos sólidos en maquetación web.</li>
           <li><span className="text-green-500">JavaScript</span> (ES6+): Desarrollo interactivo y dinámico.</li>
+          <li><span className="text-green-500">TypeScript</span>: Desarrollo interactivo y dinámico tipado.</li>
           <li><span className="text-green-500">Tailwind CSS</span>: Diseño eficiente y componentes reutilizables.</li>
-          <li><span className="text-green-500">React.js</span> y <span className="text-green-500 font-medium">Vue.js</span>: Frameworks modernos para crear aplicaciones web.</li>
+          <li><span className="text-green-500">React.js</span>: Framework moderno para crear aplicaciones web.</li>
         </ul>
 
         <p className="text-gray-400">
