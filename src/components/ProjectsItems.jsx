@@ -10,7 +10,6 @@ export const ProjectsItems = () => {
         arrows: false,
         slidesToShow: 3,
         slidesToScroll: 1,
-        autoplay: true,
         speed: 4000,
         cssEase: "linear",
         // responsive: [
