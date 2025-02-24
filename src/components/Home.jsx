@@ -25,11 +25,11 @@ function Home() {
 
           <h2 className="text-3xl font-semibold text-white text-left mb-1">Habilidades principales:</h2>
           <ul className="list-disc  text-gray-400 text-lg text-left ml-10">
-            <li className="flex items-center"> <div><span className="text-green-500">HTML5</span> y <span className="text-green-500 font-medium">CSS3 </span>: Fundamentos sólidos en maquetación web.</div><FaHtml5 className="text-orange-500 text-xl" /><FaCss3Alt className="text-blue-500 text-xl" /> </li>
-            <li className="flex items-center"><div><span className="text-green-500">JavaScript</span> (ES6+): Desarrollo interactivo y dinámico.</div><FaJs className="text-yellow-400 text-xl" /></li>
-            <li className="flex items-center"><div><span className="text-green-500">TypeScript</span>: Desarrollo interactivo y dinámico tipado.</div><SiTypescript className="text-blue-600 text-xl" /></li>
-            <li className="flex items-center"><div> <span className="text-green-500">Tailwind CSS</span>: Diseño eficiente y componentes reutilizables.</div><SiTailwindcss className="text-teal-400 text-xl" /></li>
-            <li className="flex items-center"><div> <span className="text-green-500">React.js</span>: Framework moderno para crear aplicaciones web.</div><FaReact className="text-blue-400 text-xl animate-spin-slow" /></li>
+            <li className="flex items-center"><span className="text-green-500">HTML5</span> y <span className="text-green-500 font-medium">CSS3 </span>: Fundamentos sólidos en maquetación web.</li>
+            <li className="flex items-center"><span className="text-green-500">JavaScript</span> (ES6+): Desarrollo interactivo y dinámico.</li>
+            <li className="flex items-center"><span className="text-green-500">TypeScript</span>: Desarrollo interactivo y dinámico tipado.</li>
+            <li className="flex items-center"> <span className="text-green-500">Tailwind CSS</span>: Diseño eficiente y componentes reutilizables.</li>
+            <li className="flex items-center"> <span className="text-green-500">React.js</span>: Framework moderno para crear aplicaciones web.</li>
           </ul>
 
           <p className="text-gray-400 mt-1">
