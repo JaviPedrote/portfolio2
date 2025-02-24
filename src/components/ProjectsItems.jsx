@@ -12,7 +12,7 @@ export const ProjectsItems = () => {
         slidesToScroll: 1,
         swipeToSlide: true,
         autoplay: true,
-        autoplaySpeed: 200,
+        autoplaySpeed: 600,
         speed: 2000,
         cssEase: "linear",
         responsive: [
