@@ -10,12 +10,12 @@ function Navbar() {
   ];
 
   return (
-    <nav className="bg-gray-800 flex fixed w-full top-0 z-50 h-16">
+    <nav className="bg-gray-800 lg:flex fixed w-full top-0 z-50 h-12 hidden">
       <div className="container mx-auto flex justify-between items-center p-4">
-        <div className="text-2xl font-bold text-green-500">Mi Portafolio</div>
+        <div className="text-2xl font-bold text-green-500"></div>
         <div className="relative">
           <button
-            className="bg-gray-700 px-4 py-2 rounded hover:bg-gray-600"
+            className="bg-gray-700 px-2 py-1 rounded hover:bg-gray-600"
             onClick={() => setIsOpen(!isOpen)}
           >
             Proyectos

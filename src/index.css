@@ -12,3 +12,9 @@ body{
   mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 80%, rgba(17, 24, 39, 0) 100%);
   -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 80%, rgba(17, 24, 39, 0) 100%);
 }
+
+@keyframes cambio {
+  0% { background-color: #3b82f6; }
+  50% { background-color: #ef4444; }
+  100% { background-color: #3b82f6; }
+}

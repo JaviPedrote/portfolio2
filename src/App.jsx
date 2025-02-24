@@ -1,11 +1,13 @@
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
 import Home from "./components/Home";
+import { ProjectsItems } from "./components/ProjectsItems";
 
 function App() {
   return (
-    <div className="mt-24 lg:mt-10 font-sans bg-gray-900 text-white">
-      <Navbar />
+    <div className="mt-24 lg:mt-0 font-sans text-white w-screen">
+      {/* <Navbar /> */}
       <Home />
+      <ProjectsItems />
     </div>
   );
 }
