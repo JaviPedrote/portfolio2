@@ -23,11 +23,11 @@ export const ProjectsItems = () => {
         // ]
     };
     return (
-        <div className="w-full flex flex-col justify-center items-center lg:mt-16 h-36 outline">
+        <div className="w-full flex flex-col justify-center items-center lg:mt-16 h-36">
 
             <h1 className="text-white text-center mb-2 text-2xl font-bold">Proyectos</h1>
 
-            <div className="relative slider-container w-[95vw] lg:w-[600px] rounded-lg h-36 outline">
+            <div className="relative slider-container w-[98vw] lg:w-[600px] rounded-lg h-36">
                 {/* Sombra izquierda */}
                 <div className="z-10 absolute left-0 top-0 h-full w-32 bg-gradient-to-r from-gray-900 to-transparent pointer-events-none "></div>
                 <Slider {...settings}>
