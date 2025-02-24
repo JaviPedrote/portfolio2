@@ -28,7 +28,7 @@ function Home() {
           </ul>
 
           <p className="text-gray-400 mt-1">
-            Con <span className="text-green-500 ">2 años</span> de experiencia académica, me especializo en desarrollar interfaces modernas, funcionales y responsivas.
+            Con <span className="text-green-500 ">2 años</span> de experiencia académica, me especializo en desarrollar interfaces modernas,responsivas y funcionales.
           </p>
         </div>
       </div>
