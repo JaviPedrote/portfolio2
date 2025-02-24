@@ -7,19 +7,22 @@ export const ProjectsItems = () => {
     const settings = {
         dots: true,
         infinite: true,
-        arrows: false,
+        arrows: true,
         slidesToShow: 3,
         slidesToScroll: 1,
-        speed: 4000,
+        swipeToSlide: true,
+        autoplay: true,
+        autoplaySpeed: 200,
+        speed: 2000,
         cssEase: "linear",
-        // responsive: [
-        //     {
-        //         breakpoint: 1024,
-        //         settings: {
-        //             arrows: false,
-        //         }
-        //     },
-        // ]
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    arrows: false,
+                }
+            },
+        ]
     };
     return (
         <div className="w-full flex flex-col justify-center items-center lg:mt-16 h-36 animate-projects">
