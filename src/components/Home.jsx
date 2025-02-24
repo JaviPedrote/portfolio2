@@ -9,7 +9,7 @@ function Home() {
       id="home"
       className="flex lg:mt-20 lg:pt-0 mb-5 lg:mb-0 lg:flex-row flex-col-reverse justify-center gap-6 lg:gap-0 bg-gray-900"
     >
-      <div className="text-center lg:text-left flex-1 space-y-6 mb-14 lg:mb-0 lg:pl-32 mx-10 lg:mr-10">
+      <div className="text-center lg:text-left flex-1 space-y-6 mb-14 lg:mb-0 lg:pl-32 mx-3 lg:mr-10">
         <p className="text-lg text-green-500">👋 Hola, soy <span className="text-2xl font-bold">Javier Pedrote Molina</span></p>
         <h1 className="text-3xl lg:text-5xl font-bold text-green-500">
           Frontend Developer.

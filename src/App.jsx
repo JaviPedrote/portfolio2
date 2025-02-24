@@ -4,7 +4,7 @@ import { ProjectsItems } from "./components/ProjectsItems";
 
 function App() {
   return (
-    <div className="mt-24 lg:mt-0 font-sans text-white w-screen">
+    <div className="mt-10 lg:mt-0 font-sans text-white w-screen">
       {/* <Navbar /> */}
       <Home />
       <ProjectsItems />

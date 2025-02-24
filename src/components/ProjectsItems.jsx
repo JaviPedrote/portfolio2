@@ -15,16 +15,16 @@ export const ProjectsItems = () => {
         cssEase: "linear"
     };
     return (
-        <div className="w-full flex justify-center items-center mt-24 h-24">
-            <div className="slider-container w-[80vw] lg:w-[600px] rounded-lg h-full">
+        <div className="w-full flex justify-center items-center lg:mt-24 h-24">
+            <div className="slider-container w-[95vw] lg:w-[600px] rounded-lg h-full">
                 <Slider {...settings}>
-                    <div className="lg:px-1 cursor-pointer">
+                    <div className="px-0.5 lg:px-1 cursor-pointer">
                         <a href="https://simulacros.vercel.app/" className="focus:outline-none focus:border-none"><img src={img1} className="rounded-lg h-[10vh]" alt="imagen" /></a>
                     </div>
-                    <div className="lg:px-1 cursor-pointer focus:outline-none focus:border-none">
+                    <div className="px-0.5 lg:px-1 cursor-pointer focus:outline-none focus:border-none">
                         <a href="https://simulacros.vercel.app/" className="focus:outline-none focus:border-none"><img src={img1} className="rounded-lg h-[10vh]" alt="imagen" /></a>
                     </div>
-                    <div className="lg:px-1 cursor-pointer focus:outline-none">
+                    <div className="px-0.5 lg:px-1 cursor-pointer focus:outline-none">
                         <a href="https://simulacros.vercel.app/" className="focus:outline-none focus:border-none"><img src={img1} className="rounded-lg h-[10vh]" alt="imagen" /></a>
                     </div>
                 </Slider>
