@@ -33,7 +33,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="w-full lg:w-[50vw] flex-1 flex justify-center">
+      <div className="w-full lg:w-[50vw] flex-1 flex justify-center animate-img">
         <img
           src={Imagen}
           alt="Programador trabajando"

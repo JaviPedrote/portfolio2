@@ -23,7 +23,7 @@ export const ProjectsItems = () => {
         // ]
     };
     return (
-        <div className="w-full flex flex-col justify-center items-center lg:mt-16 h-36">
+        <div className="w-full flex flex-col justify-center items-center lg:mt-16 h-36 animate-projects">
 
             <h1 className="text-white text-center mb-2 text-2xl font-bold">Proyectos</h1>
 
