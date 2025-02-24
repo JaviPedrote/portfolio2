@@ -12,6 +12,8 @@ export const ProjectsItems = () => {
         slidesToScroll: 1,
         swipeToSlide: true,
         autoplay: true,
+        pauseOnFocus: true,
+        pauseOnHover: true,
         autoplaySpeed: 600,
         speed: 2000,
         cssEase: "linear",
