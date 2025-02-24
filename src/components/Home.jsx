@@ -15,7 +15,7 @@ function Home() {
     >
       <div className="text-center lg:text-left flex-1 space-y-6 mb-14 lg:mb-0 lg:pl-32 mx-3 lg:mr-10">
         <p className="text-lg text-green-500">👋 Hola, soy <span className="text-2xl font-bold">Javier Pedrote Molina</span></p>
-        <h1 className="text-3xl lg:text-6xl font-bold text-green-500">
+        <h1 className="text-4xl lg:text-6xl font-bold text-green-500">
           Frontend Developer.
         </h1>
           <p className="text-lg text-gray-300 animate-fadeIn">
