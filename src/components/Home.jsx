@@ -13,16 +13,16 @@ function Home() {
     👋 Hola, soy <span className="text-lg xl:text-2xl font-bold">Javier Pedrote Molina</span>
   </p>
   <h1 className="text-4xl xl:text-5xl 2xl:text-6xl font-bold text-green-500 animate-fadeInReverse">
-    Frontend Developer.
+    Frontend Developer
   </h1>
-  <p className="text-base text-left lg:text-lg text-gray-300 animate-fadeIn ml-14 xl:ml-0">
+  <p className="text-base text-left lg:text-lg text-gray-300 animate-fadeIn mx-6 xl:mx-0">
     Apasionado por la creación de experiencias digitales fluidas y atractivas.
   </p>
-  <div className="animate-fadeIn ml-14 xl:ml-0">
+  <div className="animate-fadeIn mx-6 xl:mx-0">
     <h2 className="text-xl lg:text-3xl font-semibold text-white text-left mb-1">
       Habilidades principales:
     </h2>
-    <ul className="list-disc text-sm xl:text-lg text-gray-400 text-left ml-10">
+    <ul className="list-disc text-sm xl:text-lg text-gray-400 text-left mx-4">
       <li>
         <span className="text-green-500">HTML5</span> y <span className="text-green-500 font-medium">CSS3</span>: Fundamentos sólidos en maquetación web.
       </li>
@@ -39,7 +39,7 @@ function Home() {
         <span className="text-green-500">React.js</span>: Framework moderno para crear aplicaciones web.
       </li>
     </ul>
-    <p className="text-gray-400  text-left mt-1 text-sm xl:text-base">
+    <p className="text-gray-400 text-left mt-1 text-sm xl:text-base">
       Con <span className="text-green-500">2 años</span> de experiencia académica, me especializo en desarrollar interfaces modernas, responsivas y funcionales.
     </p>
   </div>
