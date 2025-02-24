@@ -33,13 +33,13 @@ export const ProjectsItems = () => {
                 <Slider {...settings}>
 
                     <div className="px-0.5 lg:px-1 cursor-pointer">
-                        <a href="https://simulacros.vercel.app/" className="focus:outline-none focus:border-none"><img src={img1} className="rounded-lg h-[13vh] object-cover" alt="imagen" /></a>
+                        <a href="https://simulacros.vercel.app/" className="focus:outline-none focus:border-none"><img src={img1} className="rounded-lg w-full h-auto object-cover" alt="imagen" /></a>
                     </div>
                     <div className="px-0.5 lg:px-1 cursor-pointer focus:outline-none focus:border-none">
-                        <a href="https://simulacros.vercel.app/" className="focus:outline-none focus:border-none"><img src={img1} className="rounded-lg h-[13vh] object-cover" alt="imagen" /></a>
+                        <a href="https://simulacros.vercel.app/" className="focus:outline-none focus:border-none"><img src={img1} className="rounded-lg w-full h-auto object-cover" alt="imagen" /></a>
                     </div>
                     <div className="px-0.5 lg:px-1 cursor-pointer focus:outline-none">
-                        <a href="https://simulacros.vercel.app/" className="focus:outline-none focus:border-none"><img src={img1} className="rounded-lg h-[13vh] object-cover" alt="imagen" /></a>
+                        <a href="https://simulacros.vercel.app/" className="focus:outline-none focus:border-none"><img src={img1} className="rounded-lg w-full h-auto object-cover" alt="imagen" /></a>
                     </div>
                 </Slider>
                 {/* Sombra derecha */}
