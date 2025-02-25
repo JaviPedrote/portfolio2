@@ -15,7 +15,7 @@ function Home() {
   <h1 className="text-4xl xl:text-5xl 2xl:text-6xl font-bold text-green-500 animate-fadeInReverse">
     Frontend Developer
   </h1>
-  <p className="text-base text-left lg:text-lg text-gray-300 animate-fadeIn mx-6 xl:mx-0">
+  <p className="text-base text-left xl:text-lg text-gray-300 animate-fadeIn mx-6 xl:mx-0">
     Apasionado por la creación de experiencias digitales fluidas y atractivas.
   </p>
   <div className="animate-fadeIn mx-6 xl:mx-0">
