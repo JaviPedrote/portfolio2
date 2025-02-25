@@ -48,7 +48,7 @@ function Home() {
 
 
 
-      <div className="w-full lg:w-[50vw] flex-1 flex justify-center animate-img">
+      <div className="w-full lg:w-[50vw] flex-1 flex justify-center  animate-fadeInReverse">
         <img
           src={Imagen}
           alt="Programador trabajando"

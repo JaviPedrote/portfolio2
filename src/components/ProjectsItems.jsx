@@ -2,6 +2,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import img1 from '../assets/ImgProjecto1.webp';
+import img2 from '../assets/imgProjecto2.webp';
+
 
 export const ProjectsItems = () => {
     const settings = {
@@ -37,13 +39,13 @@ export const ProjectsItems = () => {
                 <Slider {...settings}>
 
                     <div className="px-0.5 lg:px-1 cursor-pointer">
-                        <a href="https://simulacros.vercel.app/" className="focus:outline-none focus:border-none"><img src={img1} className="rounded-lg w-full h-auto object-cover" alt="imagen" /></a>
+                        <a href="https://simulacros.vercel.app/" className="focus:outline-none focus:border-none"><img src={img1} className="rounded-lg w-full lg:h-24 h-20 object-cover" alt="imagen" /></a>
                     </div>
                     <div className="px-0.5 lg:px-1 cursor-pointer focus:outline-none focus:border-none">
-                        <a href="https://simulacros.vercel.app/" className="focus:outline-none focus:border-none"><img src={img1} className="rounded-lg w-full h-auto object-cover" alt="imagen" /></a>
+                        <a href="https://heroes-hooks.vercel.app/" className="focus:outline-none focus:border-none"><img src={img2} className="rounded-lg w-full lg:h-24 h-20 object-cover" alt="imagen" /></a>
                     </div>
                     <div className="px-0.5 lg:px-1 cursor-pointer focus:outline-none">
-                        <a href="https://simulacros.vercel.app/" className="focus:outline-none focus:border-none"><img src={img1} className="rounded-lg w-full h-auto object-cover" alt="imagen" /></a>
+                        <a href="https://simulacros.vercel.app/" className="focus:outline-none focus:border-none"><img src={img1} className="rounded-lg w-full lg:h-24 h-20 object-cover" alt="imagen" /></a>
                     </div>
                 </Slider>
                 {/* Sombra derecha */}
