@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import img1 from '../assets/ImgProjecto1.webp';
 import img2 from '../assets/imgProjecto2.webp';
 import img3 from '../assets/imgProjecto3.webp';
+import img4 from '../assets/imgProjec4.webp'
 
 
 
@@ -48,6 +49,9 @@ export const ProjectsItems = () => {
                     </div>
                     <div className="px-0.5 lg:px-1 cursor-pointer focus:outline-none">
                         <a href="https://delicate-jalebi-4f6537.netlify.app/" className="focus:outline-none focus:border-none"><img src={img3} className="rounded-lg w-full lg:h-24 h-20 object-cover" alt="imagen" /></a>
+                    </div>
+                    <div className="px-0.5 lg:px-1 cursor-pointer focus:outline-none">
+                        <a href="https://react-propinas-ts.vercel.app/" className="focus:outline-none focus:border-none"><img src={img4} className="rounded-lg w-full lg:h-24 h-20 object-cover" alt="imagen" /></a>
                     </div>
                 </Slider>
                 {/* Sombra derecha */}
