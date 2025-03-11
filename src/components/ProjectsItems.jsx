@@ -47,7 +47,7 @@ export const ProjectsItems = () => {
                         <a href="https://heroes-hooks.vercel.app/" className="focus:outline-none focus:border-none"><img src={img2} className="rounded-lg w-full lg:h-24 h-20 object-cover" alt="imagen" /></a>
                     </div>
                     <div className="px-0.5 lg:px-1 cursor-pointer focus:outline-none">
-                        <a href="https://playful-eclair-6ae781.netlify.app/" className="focus:outline-none focus:border-none"><img src={img3} className="rounded-lg w-full lg:h-24 h-20 object-cover" alt="imagen" /></a>
+                        <a href="https://delicate-jalebi-4f6537.netlify.app/" className="focus:outline-none focus:border-none"><img src={img3} className="rounded-lg w-full lg:h-24 h-20 object-cover" alt="imagen" /></a>
                     </div>
                 </Slider>
                 {/* Sombra derecha */}
