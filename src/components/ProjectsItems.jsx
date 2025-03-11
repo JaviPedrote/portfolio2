@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import img1 from '../assets/ImgProjecto1.webp';
 import img2 from '../assets/imgProjecto2.webp';
 import img3 from '../assets/imgProjecto3.webp';
-import img4 from '../assets/imgProjec4.webp'
+import img4 from '../assets/ImgProjecto4.webp';
 
 
 
