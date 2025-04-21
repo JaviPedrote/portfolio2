@@ -51,9 +51,8 @@ export function ProjectsItems() {
       responsive: [
         { breakpoint: 1536, settings: { slidesToShow: 4 } },
         { breakpoint: 1280, settings: { slidesToShow: 4 } },
-        { breakpoint: 1024, settings: { slidesToShow: 4 } },
         { breakpoint: 640, settings: { slidesToShow: 3, arrows: false } },
-        { breakpoint: 480, settings: { slidesToShow: 3, arrows: false } },
+        { breakpoint: 480, settings: { slidesToShow: 2, arrows: false } },
       { breakpoint: 320, settings: { slidesToShow: 2, arrows: false } },
       ],
     };
@@ -63,7 +62,7 @@ export function ProjectsItems() {
     const handleMouseLeave = () => sliderRef.current?.slickPlay();
   
     return (
-      <section id="projects" className="py-20 bg-gray-950">
+      <section id="projects" className="lg:py-20 py-10 bg-gray-950 border">
         <motion.div
           className="container mx-auto px-6"
           initial={{ opacity: 0, y: 40 }}
@@ -72,7 +71,6 @@ export function ProjectsItems() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl font-bold text-center text-white mb-8">Proyectos</h2>
-  
           <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-gray-950 to-transparent z-10" />
             <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-gray-950 to-transparent z-10" />

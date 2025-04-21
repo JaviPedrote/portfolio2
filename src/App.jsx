@@ -4,9 +4,9 @@ import { ProjectsItems } from "./components/ProjectsItems";
 
 function App() {
   return (
-    <div className="lg:mt-0 font-sans text-white w-screen">
+    <div className="lg:mt-0 font-sans text-white">
       <Navbar />
-        <main className="pt-10">
+        <main>
         <Home />
         <ProjectsItems />
       </main>

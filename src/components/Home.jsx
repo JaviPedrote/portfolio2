@@ -14,7 +14,7 @@ export function Home() {
   return (
     <section
       id="home"
-      className="relative flex flex-col-reverse lg:flex-row items-center justify-center gap-10 py-16 lg:py-24 bg-gray-900 h-[100vh] lg:mb-0 lg:mt-0 mb-2 mt-4 lg:h-[90vh]"
+      className="relative flex flex-col-reverse lg:flex-row items-center justify-center gap-10 py-16 lg:py-24 bg-gray-900 lg:h-[90vh]"
     >
       {/* Texto */}
       <motion.div
