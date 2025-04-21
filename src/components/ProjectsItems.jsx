@@ -82,7 +82,7 @@ export function ProjectsItems() {
         settings: {
           slidesToShow: 2.5,
           arrows: false,
-          speed: 2400,     
+          speed: 2700,     
         },
       },
       {
@@ -90,7 +90,7 @@ export function ProjectsItems() {
         settings: {
           slidesToShow: 1.5,
           arrows: false,
-          speed: 2300,     
+          speed: 2600,     
         },
       },
       {
@@ -98,7 +98,7 @@ export function ProjectsItems() {
         settings: {
           slidesToShow: 1.5,
           arrows: false,
-          speed: 2300,
+          speed: 2600,
         },
       },
     ],
