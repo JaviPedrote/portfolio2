@@ -1,65 +1,92 @@
-import Imagen from "../assets/imagen3.webp";
+import { motion } from "framer-motion";
+import heroImg from "../assets/imagen3.webp";
 
+export function Home() {
+  const textVariant = {
+    hidden: { opacity: 0, y: 30 },
+    visible: (i = 1) => ({
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, delay: i * 0.15 },
+    }),
+  };
 
-
-function Home() {
   return (
     <section
       id="home"
-      className="flex lg:mt-20 lg:pt-0  lg:flex-row flex-col-reverse justify-center gap-6 lg:gap-0 bg-gray-900"
+      className="relative flex flex-col-reverse lg:flex-row items-center justify-center gap-10 py-16 lg:py-24 bg-gray-900 h-[100vh] lg:mb-0 lg:mt-0 mb-2 mt-4 lg:h-[90vh]"
     >
-   <div className="text-center xl:text-left flex-1 space-y-6 mb-14 xl:mb-0 xl:pl-32 mx-3 xl:mr-10">
-  <p className="text-base xl:text-lg text-green-500 animate-fadeInReverse">
-    👋 Hola, soy <span className="text-lg xl:text-2xl font-bold">Javier Pedrote Molina</span>
-  </p>
-  <h1 className="text-4xl xl:text-5xl 2xl:text-6xl font-bold text-green-500 animate-fadeInReverse">
-    Frontend Developer
-  </h1>
-  <p className="text-base text-left xl:text-lg text-gray-300 animate-fadeIn mx-6 xl:mx-0">
-    Apasionado por la creación de experiencias digitales fluidas y atractivas.
-  </p>
-  <div className="animate-fadeIn mx-6 xl:mx-0">
-    <h2 className="text-xl lg:text-3xl font-semibold text-white text-left mb-1">
-      Habilidades principales:
-    </h2>
-    <ul className="list-disc text-sm xl:text-lg text-gray-400 text-left mx-4">
-      <li>
-        <span className="text-green-500">HTML5</span> y <span className="text-green-500 font-medium">CSS3</span>: Fundamentos sólidos en maquetación web.
-      </li>
-      <li>
-        <span className="text-green-500">JavaScript</span> (ES6+): Desarrollo interactivo y dinámico.
-      </li>
-      <li>
-        <span className="text-green-500">TypeScript</span>: Desarrollo interactivo y dinámico tipado.
-      </li>
-      <li>
-        <span className="text-green-500">Tailwind CSS</span>: Diseño eficiente y componentes reutilizables.
-      </li>
-      <li>
-        <span className="text-green-500">React.js</span>: Framework moderno para crear aplicaciones web.
-      </li>
-    </ul>
-    <p className="text-gray-400 text-left mt-1 text-sm xl:text-base">
-      Con <span className="text-green-500">2 años</span> de experiencia académica, me especializo en desarrollar interfaces modernas, responsivas y funcionales.
-    </p>
-  </div>
-</div>
+      {/* Texto */}
+      <motion.div
+        className="flex-1 space-y-6 px-6 lg:px-20 text-center lg:text-left"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.4 }}
+      >
+        <motion.p variants={textVariant} custom={1} className="text-lg text-green-500">
+          👋 Hola, soy <span className="font-bold">Javier Pedrote Molina</span>
+        </motion.p>
+        <motion.h1
+          variants={textVariant}
+          custom={2}
+          className="text-4xl lg:text-5xl 2xl:text-6xl font-extrabold text-green-500 leading-tight"
+        >
+          Front-End Developer
+        </motion.h1>
+        <motion.p
+          variants={textVariant}
+          custom={3}
+          className="max-w-xl mx-auto lg:mx-0 text-gray-300"
+        >
+          Apasionado por la creación de experiencias digitales fluidas y atractivas.
+        </motion.p>
 
+        <motion.div variants={textVariant} custom={4} className="space-y-4">
+          <h2 className="text-xl lg:text-2xl font-semibold text-white">
+            Habilidades principales:
+          </h2>
+          <ul className="list-disc list-inside grid gap-1 text-gray-400 text-sm lg:text-base">
+            <li>
+              <span className="text-green-500">HTML5</span> &amp;{' '}
+              <span className="text-green-500">CSS3</span>: maquetación web.
+            </li>
+            <li>
+              <span className="text-green-500">JavaScript</span> (ES6+): desarrollo
+              interactivo.
+            </li>
+            <li>
+              <span className="text-green-500">TypeScript</span>: tipado estricto.
+            </li>
+            <li>
+              <span className="text-green-500">Tailwind CSS</span>: diseño eficiente.
+            </li>
+            <li>
+              <span className="text-green-500">React</span>: interfaces modernas.
+            </li>
+          </ul>
+          <p className="text-gray-400 text-sm lg:text-base">
+            Con <span className="text-green-500">2 años</span> de experiencia académica me
+            especializo en desarrollar interfaces modernas, responsivas y
+            funcionales.
+          </p>
+        </motion.div>
+      </motion.div>
 
-
-
-      <div className="w-full lg:w-[50vw] flex-1 flex justify-center  animate-fadeInReverse">
+      {/* Imagen */}
+      <motion.div
+        className="flex-1 flex justify-center"
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        viewport={{ once: true }}
+      >
         <img
-          src={Imagen}
+          src={heroImg}
           alt="Programador trabajando"
-          className=" object-contain w-[70vw] h-[70vw] lg:w-[35vw] lg:h-[35vw] max-h-[500px] max-w-[500px] rounded-[2%] imagen-difuminada"
+          className="w-5/6 max-w-[480px] aspect-square object-cover rounded-2xl shadow-lg"
+          loading="lazy"
         />
-      </div>
-
+      </motion.div>
     </section>
-
-
   );
 }
-
-export default Home;

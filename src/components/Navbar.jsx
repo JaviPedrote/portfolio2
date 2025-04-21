@@ -1,47 +1,77 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaBars, FaTimes } from "react-icons/fa";
 
-function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
 
-  const projects = [
-    { name: "Proyecto 1", link: "https://simulacros.vercel.app/" },
-    { name: "Proyecto 2", link: "https://enlace-a-proyecto-2.com" },
-    { name: "Proyecto 3", link: "https://enlace-a-proyecto-3.com" },
+export function Navbar() {
+  const [open, setOpen] = useState(false);
+
+  // Bloquea el scroll al abrir el menú móvil
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "unset";
+  }, [open]);
+
+  const links = [
+    { label: "Inicio", href: "#home" },
+    { label: "Proyectos", href: "#projects" },
   ];
 
   return (
-    <nav className="bg-gray-800 lg:flex fixed w-full top-0 z-50 h-12 hidden">
-      <div className="container mx-auto flex justify-between items-center p-4">
-        <div className="text-2xl font-bold text-green-500"></div>
-        <div className="relative">
-          <button
-            className="bg-gray-700 px-2 py-1 rounded hover:bg-gray-600"
-            onClick={() => setIsOpen(!isOpen)}
+    <header className="fixed inset-x-0 top-0 z-50 bg-gray-900/80 backdrop-blur-md">
+      <nav className="container mx-auto flex items-center justify-between px-6 py-3">
+        <a href="#home" className="text-xl font-bold text-green-500">
+          JP
+        </a>
+
+        {/* Links escritorio */}
+        <ul className="hidden lg:flex gap-6">
+          {links.map((l) => (
+            <li key={l.label}>
+              <a
+                href={l.href}
+                className="text-gray-300 hover:text-green-500 transition-colors"
+              >
+                {l.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        {/* Botón hamburguesa */}
+        <button
+          aria-label="Abrir menú"
+          className="lg:hidden text-green-500"
+          onClick={() => setOpen(!open)}
+        >
+          {open ? <FaTimes size={24} /> : <FaBars size={24} />}
+        </button>
+      </nav>
+
+      {/* Menú móvil */}
+      <AnimatePresence initial={false}>
+        {open && (
+          <motion.ul
+            key="mobileMenu"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="origin-top flex flex-col gap-4 bg-gray-800 px-6 pb-6 pt-3 lg:hidden"
           >
-            Proyectos
-          </button>
-          {isOpen && (
-            <div
-              className="absolute bg-gray-700 mt-2 w-40 rounded shadow-lg"
-              onMouseLeave={() => setIsOpen(false)}
-            >
-              {projects.map((project, index) => (
+            {links.map((l) => (
+              <li key={l.label}>
                 <a
-                  key={index}
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-2 hover:bg-gray-600"
+                  href={l.href}
+                  className="block text-gray-300 hover:text-green-500 transition-colors"
+                  onClick={() => setOpen(false)}
                 >
-                  {project.name}
+                  {l.label}
                 </a>
-              ))}
-            </div>
-          )}
-        </div>
-      </div>
-    </nav>
+              </li>
+            ))}
+          </motion.ul>
+        )}
+      </AnimatePresence>
+    </header>
   );
 }
-
-export default Navbar;
