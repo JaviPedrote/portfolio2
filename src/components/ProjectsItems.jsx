@@ -50,10 +50,10 @@ export function ProjectsItems() {
       swipeToSlide: true,
       responsive: [
         { breakpoint: 1536, settings: { slidesToShow: 4 } },
-        { breakpoint: 1280, settings: { slidesToShow: 4 } },
-        { breakpoint: 640, settings: { slidesToShow: 3, arrows: false } },
-        { breakpoint: 480, settings: { slidesToShow: 2, arrows: false } },
-      { breakpoint: 320, settings: { slidesToShow: 2, arrows: false } },
+        { breakpoint: 1280, settings: { slidesToShow: 3 } },
+        { breakpoint: 640, settings: { slidesToShow: 2.5, arrows: false } },
+        { breakpoint: 480, settings: { slidesToShow: 1.5, arrows: false } },
+      { breakpoint: 320, settings: { slidesToShow: 1.5, arrows: false } },
       ],
     };
   
@@ -75,7 +75,7 @@ export function ProjectsItems() {
             <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-gray-950 to-transparent z-10" />
             <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-gray-950 to-transparent z-10" />
   
-            <Slider ref={sliderRef} {...settings} className="px-2">
+            <Slider ref={sliderRef} {...settings} className=" px-1 lg:px-2">
               {projects.map(({ img, link, name }) => (
                 <motion.a
                   key={name}
