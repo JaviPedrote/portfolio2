@@ -56,7 +56,7 @@ export function Navbar() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="origin-top flex flex-col gap-4 bg-gray-800 px-6 pb-6 pt-3 lg:hidden"
+            className="origin-top flex flex-col gap-4 bg-gray-800 px-6 py-4 lg:hidden"
           >
             {links.map((l) => (
               <li key={l.label}>

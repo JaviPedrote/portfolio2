@@ -51,6 +51,8 @@ export function ProjectsItems() {
       responsive: [
         { breakpoint: 1536, settings: { slidesToShow: 4 } },
         { breakpoint: 1280, settings: { slidesToShow: 3 } },
+        { breakpoint: 1024, settings: { slidesToShow: 2.5 } },
+        { breakpoint: 768, settings: { slidesToShow: 2.5, arrows: false } },
         { breakpoint: 640, settings: { slidesToShow: 2.5, arrows: false } },
         { breakpoint: 480, settings: { slidesToShow: 1.5, arrows: false } },
       { breakpoint: 320, settings: { slidesToShow: 1.5, arrows: false } },
