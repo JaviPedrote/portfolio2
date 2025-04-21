@@ -62,7 +62,7 @@ export function ProjectsItems() {
     const handleMouseLeave = () => sliderRef.current?.slickPlay();
   
     return (
-      <section id="projects" className="lg:py-20 py-10 bg-gray-950 border">
+      <section id="projects" className="lg:py-20 py-10 bg-gray-950">
         <motion.div
           className="container mx-auto px-6"
           initial={{ opacity: 0, y: 40 }}
