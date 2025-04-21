@@ -52,21 +52,21 @@ export function ProjectsItems() {
         breakpoint: 1536,
         settings: {
           slidesToShow: 4,
-          speed: 9000,      // más lento para pantallas grandes
+          speed: 8500,  
         },
       },
       {
         breakpoint: 1280,
         settings: {
           slidesToShow: 3,
-          speed: 8000,
+          speed: 7000,
         },
       },
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2.5,
-          speed: 6000,
+          speed: 5500,
         },
       },
       {
@@ -74,7 +74,7 @@ export function ProjectsItems() {
         settings: {
           slidesToShow: 2.5,
           arrows: false,
-          speed: 4000,
+          speed: 3300,
         },
       },
       {
@@ -82,7 +82,7 @@ export function ProjectsItems() {
         settings: {
           slidesToShow: 2.5,
           arrows: false,
-          speed: 3000,     
+          speed: 2400,     
         },
       },
       {
@@ -90,7 +90,7 @@ export function ProjectsItems() {
         settings: {
           slidesToShow: 1.5,
           arrows: false,
-          speed: 3000,     
+          speed: 2300,     
         },
       },
       {
@@ -98,7 +98,7 @@ export function ProjectsItems() {
         settings: {
           slidesToShow: 1.5,
           arrows: false,
-          speed: 3000,
+          speed: 2300,
         },
       },
     ],
