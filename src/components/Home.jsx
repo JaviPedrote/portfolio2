@@ -31,7 +31,7 @@ export function Home() {
           custom={2}
           className="text-4xl lg:text-5xl 2xl:text-6xl font-extrabold text-green-500 leading-tight"
         >
-          Front-End Developer
+          Full-stack developer
         </motion.h1>
         <motion.p
           variants={textVariant}
@@ -63,6 +63,13 @@ export function Home() {
             <li>
               <span className="text-green-500">React</span>: interfaces modernas.
             </li>
+            <li>
+              <span className="text-green-500">Laravel</span>: backend y API REST.
+            </li>
+            <li>
+              <span className="text-green-500">Git</span>: control de versiones.
+            </li>
+
           </ul>
           <p className="text-gray-400 text-sm lg:text-base">
             Con <span className="text-green-500">2 años</span> de experiencia académica me
