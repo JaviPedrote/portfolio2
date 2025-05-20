@@ -15,7 +15,7 @@ export function ProjectsItems() {
   const sliderRef = useRef(null);
 
   const projects = [
-    { img: img1, link: "https://simulacros.vercel.app/", name: "Simulacros" },
+    { img: img1, link: "https://sucer-front.vercel.app/home", name: "Simulacros" },
     { img: img2, link: "https://heroes-hooks.vercel.app/", name: "Heroes Hooks" },
     { img: img3, link: "https://delicate-jalebi-4f6537.netlify.app/", name: "Weather App" },
     { img: img4, link: "https://react-propinas-ts.vercel.app/", name: "Propinas TS" },
