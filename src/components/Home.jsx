@@ -243,7 +243,7 @@ export function Home() {
               <img
                 src={logo}
                 alt="Logo de Kodedev"
-                className="absolute -top-4 right-4 w-22 h-22 object-contain animate-pulse-xl animate-delayed-logo"
+                className="absolute -top-4 right-4 w-22 h-22 object-contain animate-pulse-xl"
                 loading="lazy"
               />
             </div>
