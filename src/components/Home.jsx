@@ -55,7 +55,7 @@ export function Home() {
       />
       <div className="absolute top-20 right-10 w-72 h-72 bg-purple-600/20 rounded-full filter blur-3xl opacity-20 animate-pulse"></div>
       <div className="absolute bottom-20 left-10 w-72 h-72 bg-blue-600/20 rounded-full filter blur-3xl opacity-20 animate-pulse delay-700"></div>
-      <div className="mx-auto px-4 flex flex-col items-center justify-between lg:px-6  mt-4 lg:mt-0 lg:py-24 pt-20 w-full">
+      <div className="mx-auto px-4 flex flex-col items-center justify-between lg:px-6  mt-4 lg:mt-0 lg:py-24 pt-18 w-full">
 
         {/* Texto superior */}
         <motion.div
@@ -67,7 +67,7 @@ export function Home() {
           <div className="">
             <div
               className="relative z-10 [-webkit-mask-image:linear-gradient(90deg,transparent_0%,#000_30%,#000_70%,transparent_100%)]
-          [mask-size:200%_100%] [-webkit-mask-size:200%_100%] animate-wipe-x text-6xl font-extrabold mb-6"
+          [mask-size:200%_100%] [-webkit-mask-size:200%_100%] animate-wipe-x text-6xl font-extrabold mb-4"
             >
               <h1 className="text-transparent text-center bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-indigo-600 text-4xl lg:text-6xl font-extrabold mb-2 animate-gradient-x[mask-image:linear-gradient(90deg,transparent_0%,#000_80%,#000_150%,transparent_200%)]">
                 Kodedev
