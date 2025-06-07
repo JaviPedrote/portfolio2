@@ -232,12 +232,14 @@ export function Home() {
                 className="w-full h-full object-contain"
                 loading="lazy"
               />
+              <div className="absolute -top-2 right-5 w-22 h-22 object-contain animate-spin-slow bg-gradient-to-r from-blue-600/30 to-purple-600/30 rounded-4xl"></div>
               <img
                 src={logo}
                 alt="Logo de Kodedev"
-                className="absolute top-0 right-6 w-24 h-24 object-contain animate-pulse-xl duration-500"
+                className="absolute -top-4 right-4 w-24 h-24 object-contain animate-pulse-xl"
                 loading="lazy"
               />
+              
           </div>
         </motion.div>
       </div>
