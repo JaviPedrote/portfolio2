@@ -168,7 +168,7 @@ body {
 .animate-delayed-logo {
   opacity: 0; 
   animation: fade-in-from-top-right 1s ease-out forwards;
-  animation-delay: 3s; 
+  animation-delay: 2s; 
 }
 
 
