@@ -88,6 +88,22 @@ body {
     --color-secondary-50: #fefefe;
 }
 
+.animate-pulse-xl {
+  animation: pulse-xl 3s ease-in-out infinite;
+}
+
+@keyframes pulse-xl {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
   @keyframes fadeInLeft {
     from {
       opacity: 0;

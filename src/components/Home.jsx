@@ -54,7 +54,8 @@ export function Home() {
       <div className="absolute top-20 right-10 w-72 h-72 bg-purple-600/20 rounded-full filter blur-3xl opacity-20 animate-pulse"></div>
       <div className="absolute bottom-20 left-10 w-72 h-72 bg-blue-600/20 rounded-full filter blur-3xl opacity-20 animate-pulse delay-700"></div>
       <div className="mx-auto px-4 flex flex-col items-center justify-between lg:px-6  mt-10 lg:mt-0 lg:py-24 pt-20 w-full">
-        {/* Texto */}
+
+        {/* Texto superior */}
         <div>
           <div
             className="relative z-10 [-webkit-mask-image:linear-gradient(90deg,transparent_0%,#000_30%,#000_70%,transparent_100%)]
@@ -103,7 +104,7 @@ export function Home() {
          
           </motion.p>
         </div>
-        <div className="flex flex-col lg:flex-row items-center justify-center w-full h-full lg:h-auto">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-center w-full h-full lg:h-auto mb-8 lg:mb-0">
 
         {/* tecnologias*/}
         <motion.div
@@ -195,7 +196,7 @@ export function Home() {
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
         >
-          <div className="relative w-full max-w-[500px] mx-auto">
+          <div className="relative w-full max-w-[500px] mx-auto hidden lg:block">
             <Atropos
               className="w-full h-[450px] lg:h-[600px] rounded-2xl overflow-hidden"
               highlight={false}
@@ -212,17 +213,31 @@ export function Home() {
                 src={heroImg}
                 alt="Fondo de programación"
                 className="w-full h-full object-contain absolute inset-0"
-                data-atropos-offset="3"
+                data-atropos-offset="-5"
                 loading="lazy"
               />
               <img
                 src={logo}
                 alt="Logo de Kodedev"
-                className="absolute top-8 left-8 w-24 h-24 object-contain"
-                data-atropos-offset="6"
+                className="absolute top-12 right-6 w-28 h-28 object-contain"
+                data-atropos-offset="20"
                 loading="lazy"
               />
             </Atropos>
+          </div>
+          <div className="relative w-full max-w-[500px] mx-auto lg:hidden min-w-screen sm:min-w-[600px] px-2 md:px-0">
+              <img
+                src={heroImg}
+                alt="Fondo de programación"
+                className="w-full h-full object-contain"
+                loading="lazy"
+              />
+              <img
+                src={logo}
+                alt="Logo de Kodedev"
+                className="absolute top-0 right-6 w-24 h-24 object-contain animate-pulse-xl duration-500"
+                loading="lazy"
+              />
           </div>
         </motion.div>
       </div>
@@ -247,7 +262,7 @@ export function Home() {
           </h2>
           <div className="h-1 w-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mx-auto"></div>
         </motion.div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           {projects.map(({ img, title, text, link }) => (
             <motion.div
               key={title}
@@ -274,12 +289,12 @@ export function Home() {
                   loading="lazy"
                 />
                 <div
-                  className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-black/50 to-transparent"
-                  data-atropos-offset="0"
+                  className="absolute inset-0 w-full h-full"
+                  data-atropos-offset="40"
                 />
                 <div
-                  className="absolute bottom-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-xl font-bold text-white drop-shadow-lg backdrop-blur-sm bg-gradient-to-r from-blue-500/50 to-purple-500/50 px-4 py-1 rounded-lg border border-white/10"
-                  data-atropos-offset="10"
+                  className="absolute bottom-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:text-3xl text-xl font-bold text-white drop-shadow-lg backdrop-blur-sm bg-gradient-to-r from-blue-500/50 to-purple-500/50 px-4 py-1 rounded-lg border border-white/10"
+                  data-atropos-offset="40"
                 >
                   {title}
                 </div>
