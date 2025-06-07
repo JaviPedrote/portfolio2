@@ -189,7 +189,7 @@ export function Home() {
 
           {/* Efecto 3D con Atropos - Lado derecho (imagen) */}
           <motion.div
-          className="w-full lg:w-1/2 flex justify-center items-center h-full lg:h-auto animate-bounce-card"
+          className="w-full lg:w-1/2 flex justify-center items-center h-full lg:h-auto"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -226,7 +226,7 @@ export function Home() {
           </div>
 
           {/* imagen movil */}
-          <div className="relative w-full max-w-[500px] mx-auto lg:hidden min-w-screen sm:min-w-[600px] px-2 md:px-0">
+          <div className="relative w-full max-w-[500px] mx-auto lg:hidden min-w-screen sm:min-w-[600px] px-2 md:px-0 animate-rocket-image">
               <img
                 src={heroImg}
                 alt="Fondo de programación"
@@ -237,7 +237,7 @@ export function Home() {
               <img
                 src={logo}
                 alt="Logo de Kodedev"
-                className="absolute -top-4 right-4 w-22 h-22 object-contain animate-pulse-xl"
+                className="absolute -top-4 right-4 w-22 h-22 object-contain animate-pulse-xl animate-delayed-logo"
                 loading="lazy"
               />
               

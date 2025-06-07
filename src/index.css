@@ -104,6 +104,75 @@ body {
   }
 }
 
+@keyframes bounce-in-top {
+  0% {
+    transform: translateY(-500px) scale(0.7);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(0) scale(1.05);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(0.98);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-from-top-right {
+  0% {
+    transform: translate(20px, -20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes fade-in-from-top-right {
+  0% {
+    transform: translate(20px, -20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes rocket-from-top-left {
+  0% {
+    transform: translate(-800px, -800px) rotate(-45deg) scale(0.5);
+    opacity: 0;
+  }
+  80% {
+    transform: translate(20px, 20px) rotate(5deg) scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+
+.animate-rocket-image {
+  animation: rocket-from-top-left 3s cubic-bezier(0.175, 0.885, 0.32, 2) forwards;
+}
+
+.animate-delayed-logo {
+  opacity: 0; 
+  animation: fade-in-from-top-right 1s ease-out forwards;
+  animation-delay: 3s; 
+}
+
+
+
 @keyframes spin-slow {
   from {
     transform: rotate(0deg);
@@ -115,19 +184,24 @@ body {
 
 .animate-bounce-card {
  
-  animation: bounce-card 3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation: bounce-card 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
 @keyframes bounce-card {
  
   0% {
-    transform: translate(-400px, -400px) rotate(45deg);
+    transform: translateY(-500px) scale(0.7) rotate(-15deg);
     opacity: 0;
   }
-
- 
+  60% {
+    transform: translateY(0) scale(1.05) rotate(3deg);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(0.98) rotate(-1deg);
+  }
   100% {
-    transform: translate(0, 0) rotate(0deg);
+    transform: scale(1) rotate(0deg);
     opacity: 1;
   }
 }
@@ -164,7 +238,6 @@ body {
     animation: projects 2s ease-in-out;
   }
 
-/* Estilos personalizados para Atropos */
 .atropos {
   background: transparent !important;
 }
