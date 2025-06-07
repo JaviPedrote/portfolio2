@@ -53,7 +53,7 @@ export function Home() {
       />
       <div className="absolute top-20 right-10 w-72 h-72 bg-purple-600/20 rounded-full filter blur-3xl opacity-20 animate-pulse"></div>
       <div className="absolute bottom-20 left-10 w-72 h-72 bg-blue-600/20 rounded-full filter blur-3xl opacity-20 animate-pulse delay-700"></div>
-      <div className="mx-auto px-4 flex flex-col items-center justify-between lg:px-6  mt-10 lg:mt-0 lg:py-24 pt-20 w-full">
+      <div className="mx-auto px-4 flex flex-col items-center justify-between lg:px-6  mt-4 lg:mt-0 lg:py-24 pt-20 w-full">
 
         {/* Texto superior */}
         <div>
@@ -62,15 +62,14 @@ export function Home() {
           [mask-size:200%_100%] [-webkit-mask-size:200%_100%] animate-wipe-x text-6xl font-extrabold mb-6"
           >
             <h1
-              className="text-transparent text-center bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-indigo-600 text-6xl font-extrabold mb-2 animate-gradient-x[mask-image:linear-gradient(90deg,transparent_0%,#000_80%,#000_150%,transparent_200%)]
-          "
+              className="text-transparent text-center bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-indigo-600 text-4xl lg:text-6xl font-extrabold mb-2 animate-gradient-x[mask-image:linear-gradient(90deg,transparent_0%,#000_80%,#000_150%,transparent_200%)]"
             >
               Kodedev
             </h1>
             <motion.h1
               variants={fadeIn}
               custom={2}
-              className="text-4xl lg:text-5xl 2xl:text-6xl font-extrabold text-white leading-tight mb-6"
+              className="text-2xl lg:text-5xl 2xl:text-6xl font-extrabold text-white leading-tight lg:mb-6 mb-2"
             >
               <div className="flex justify-center w-full">
                 <span className="relative text-center">
@@ -84,13 +83,13 @@ export function Home() {
           <motion.p
             variants={fadeIn}
             custom={1}
-            className="text-lg text-white mb-4 text-center lg:flex lg:items-center lg:justify-center lg:gap-2"
-          >
-            Soy{" "}
-            <span className="font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 inline-block">
+            className=" text-white md:text-xl text-[14px] mb-4 text-center lg:flex lg:items-center lg:justify-center lg:gap-2"
+          > 
+          Soy
+            <span className="font-bold text-xl lg:text-xl mx-2 lg:mx-0.1 bg-clip-text lg:animate-none text-transparent bg-gradient-to-r from-blue-400 to-purple-500 inline-block">
               Javier Pedrote Molina 
             </span>
-            <span className="text-white inline-block">
+            <span className="text-white md:text-xl inline-block">
               apasionado por la creación de experiencias digitales fluidas y
               atractivas.
             </span>
@@ -111,7 +110,7 @@ export function Home() {
           variants={fadeIn}
           initial="hidden"
           animate="show"
-          className="w-full lg:w-1/2 text-center lg:text-left lg:mt-0"
+          className="w-full lg:w-1/2 text-center lg:text-left lg:mt-0 "
         >
           <motion.div
             variants={fadeIn}
@@ -122,7 +121,7 @@ export function Home() {
               Habilidades principales
             </h2>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 ">
               <div className="bg-gray-800/80 p-3 rounded-lg border border-blue-500/30 hover:border-blue-500/60 transition-all hover:shadow-md hover:shadow-blue-500/20 group">
                 <div className="text-blue-400 font-bold mb-1 group-hover:text-blue-300 transition-colors">
                   HTML5 & CSS3
@@ -190,7 +189,7 @@ export function Home() {
 
           {/* Efecto 3D con Atropos - Lado derecho (imagen) */}
           <motion.div
-          className="w-full lg:w-1/2 flex justify-center items-center h-full lg:h-auto"
+          className="w-full lg:w-1/2 flex justify-center items-center h-full lg:h-auto animate-bounce-card"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -225,6 +224,8 @@ export function Home() {
               />
             </Atropos>
           </div>
+
+          {/* imagen movil */}
           <div className="relative w-full max-w-[500px] mx-auto lg:hidden min-w-screen sm:min-w-[600px] px-2 md:px-0">
               <img
                 src={heroImg}
@@ -232,11 +233,11 @@ export function Home() {
                 className="w-full h-full object-contain"
                 loading="lazy"
               />
-              <div className="absolute -top-2 right-5 w-22 h-22 object-contain animate-spin-slow bg-gradient-to-r from-blue-600/30 to-purple-600/30 rounded-4xl"></div>
+              <div className="absolute -top-1 right-6.5 w-18 h-18 object-contain animate-spin-slow bg-gradient-to-r from-blue-700/30 to-purple-700/30 rounded-4xl"></div>
               <img
                 src={logo}
                 alt="Logo de Kodedev"
-                className="absolute -top-4 right-4 w-24 h-24 object-contain animate-pulse-xl"
+                className="absolute -top-4 right-4 w-22 h-22 object-contain animate-pulse-xl"
                 loading="lazy"
               />
               
