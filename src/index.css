@@ -162,7 +162,7 @@ body {
 
 
 .animate-rocket-image {
-  animation: rocket-from-top-right 1.8s cubic-bezier(0.5, 0.5, 0.5, 2) forwards;
+  animation: rocket-from-top-right 1.8s cubic-bezier(0.5, 0.5, 0.5, 2.5) forwards;
 }
 
 .animate-delayed-logo {
