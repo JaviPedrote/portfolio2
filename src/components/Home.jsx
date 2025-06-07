@@ -44,8 +44,10 @@ const fadeIn = {
 
 export function Home() {
   return (
-
-    <section className="relative isolate overflow-hidden bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 lg:animate-rocket-image" id="home">
+    <section
+      className="relative isolate overflow-hidden bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 lg:animate-rocket-image"
+      id="home"
+    >
       {/* Fondo con efecto de partículas/grid */}
       <div
         aria-hidden
@@ -53,180 +55,184 @@ export function Home() {
       />
       <div className="absolute top-20 right-10 w-72 h-72 bg-purple-600/20 rounded-full filter blur-3xl opacity-20 animate-pulse"></div>
       <div className="absolute bottom-20 left-10 w-72 h-72 bg-blue-600/20 rounded-full filter blur-3xl opacity-20 animate-pulse delay-700"></div>
-      <div className="mx-auto px-4 flex flex-col items-center justify-between lg:px-6  mt-4 lg:mt-0 lg:py-24 pt-20 w-full lg:animate-rocket-image">
+      <div className="mx-auto px-4 flex flex-col items-center justify-between lg:px-6  mt-4 lg:mt-0 lg:py-24 pt-20 w-full">
 
         {/* Texto superior */}
-        <div className="animate-rocket-image">
-          <div
-            className="relative z-10 [-webkit-mask-image:linear-gradient(90deg,transparent_0%,#000_30%,#000_70%,transparent_100%)]
-          [mask-size:200%_100%] [-webkit-mask-size:200%_100%] animate-wipe-x text-6xl font-extrabold mb-6"
-          >
-            <h1
-              className="text-transparent text-center bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-indigo-600 text-4xl lg:text-6xl font-extrabold mb-2 animate-gradient-x[mask-image:linear-gradient(90deg,transparent_0%,#000_80%,#000_150%,transparent_200%)]"
-            >
-              Kodedev
-            </h1>
-            <motion.h1
-              variants={fadeIn}
-              custom={2}
-              className="text-2xl lg:text-5xl 2xl:text-6xl font-extrabold text-white leading-tight lg:mb-6 mb-2"
-            >
-              <div className="flex justify-center w-full">
-                <span className="relative text-center">
-                  <span className="relative z-10 text-white bg-clip-text">Full-stack developer</span>
-                  <span className="absolute bottom-0 left-0 w-full h-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg opacity-70 transform -translate-y-1 hidden lg:block"></span>
-                </span>
-              </div>
-            </motion.h1>
-          </div>
-
-          <motion.p
-            variants={fadeIn}
-            custom={1}
-            className=" text-white md:text-xl text-[14px] mb-4 text-center lg:flex lg:items-center lg:justify-center lg:gap-2"
-          > 
-          Soy
-            <span className="font-bold text-xl lg:text-xl mx-2 lg:mx-0.1 bg-clip-text lg:animate-none text-transparent bg-gradient-to-r from-blue-400 to-purple-500 inline-block">
-              Javier Pedrote Molina 
-            </span>
-            <span className="text-white md:text-xl inline-block">
-              apasionado por la creación de experiencias digitales fluidas y
-              atractivas.
-            </span>
-          </motion.p>
-
-          <motion.p
-            variants={fadeIn}
-            custom={3}
-            className="mx-auto lg:mx-0 text-gray-300 lg:ml-24 text-lg italic"
-          >
-         
-          </motion.p>
-        </div>
-        <div className="flex flex-col-reverse lg:flex-row items-center justify-center w-full h-full lg:h-auto mb-8 lg:mb-0 ">
-
-        {/* tecnologias*/}
         <motion.div
-          variants={fadeIn}
-          initial="hidden"
-          animate="show"
-          className="w-full lg:w-1/2 text-center lg:text-left lg:mt-0 animate-rocket-image"
+          initial={{ opacity: 0, scale: 0.5 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 2, delay: 0.3 }}
+          viewport={{ once: true }}
         >
-          <motion.div
-            variants={fadeIn}
-            custom={4}
-            className="space-y-6 mt-10 lg:ml-24 text-left bg-gray-800/50 p-6 rounded-xl backdrop-blur-sm border border-gray-700/50 shadow-xl"
-          >
-            <h2 className="text-xl lg:text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
-              Habilidades principales
-            </h2>
-
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 ">
-              <div className="bg-gray-800/80 p-3 rounded-lg border border-blue-500/30 hover:border-blue-500/60 transition-all hover:shadow-md hover:shadow-blue-500/20 group">
-                <div className="text-blue-400 font-bold mb-1 group-hover:text-blue-300 transition-colors">
-                  HTML5 & CSS3
-                </div>
-                <div className="text-gray-400 text-sm">Maquetación web</div>
-              </div>
-
-              <div className="bg-gray-800/80 p-3 rounded-lg border border-purple-500/30 hover:border-purple-500/60 transition-all hover:shadow-md hover:shadow-purple-500/20 group">
-                <div className="text-purple-400 font-bold mb-1 group-hover:text-purple-300 transition-colors">
-                  JavaScript
-                </div>
-                <div className="text-gray-400 text-sm">
-                  Desarrollo interactivo
-                </div>
-              </div>
-
-              <div className="bg-gray-800/80 p-3 rounded-lg border border-indigo-500/30 hover:border-indigo-500/60 transition-all hover:shadow-md hover:shadow-indigo-500/20 group">
-                <div className="text-indigo-400 font-bold mb-1 group-hover:text-indigo-300 transition-colors">
-                  TypeScript
-                </div>
-                <div className="text-gray-400 text-sm">Tipado estricto</div>
-              </div>
-
-              <div className="bg-gray-800/80 p-3 rounded-lg border border-cyan-500/30 hover:border-cyan-500/60 transition-all hover:shadow-md hover:shadow-cyan-500/20 group">
-                <div className="text-cyan-400 font-bold mb-1 group-hover:text-cyan-300 transition-colors">
-                  Tailwind CSS
-                </div>
-                <div className="text-gray-400 text-sm">Diseño eficiente</div>
-              </div>
-
-              <div className="bg-gray-800/80 p-3 rounded-lg border border-blue-500/30 hover:border-blue-500/60 transition-all hover:shadow-md hover:shadow-blue-500/20 group">
-                <div className="text-blue-400 font-bold mb-1 group-hover:text-blue-300 transition-colors">
-                  React
-                </div>
-                <div className="text-gray-400 text-sm">Interfaces modernas</div>
-              </div>
-
-              <div className="bg-gray-800/80 p-3 rounded-lg border border-red-500/30 hover:border-red-500/60 transition-all hover:shadow-md hover:shadow-red-500/20 group">
-                <div className="text-red-400 font-bold mb-1 group-hover:text-red-300 transition-colors">
-                  Laravel
-                </div>
-                <div className="text-gray-400 text-sm">Backend y API REST</div>
-              </div>
-
-              <div className="bg-gray-800/80 p-3 rounded-lg border border-orange-500/30 hover:border-orange-500/60 transition-all hover:shadow-md hover:shadow-orange-500/20 group col-span-2 sm:col-span-1">
-                <div className="text-orange-400 font-bold mb-1 group-hover:text-orange-300 transition-colors">
-                  Git
-                </div>
-                <div className="text-gray-400 text-sm">
-                  Control de versiones
+          <div className="">
+            <div
+              className="relative z-10 [-webkit-mask-image:linear-gradient(90deg,transparent_0%,#000_30%,#000_70%,transparent_100%)]
+          [mask-size:200%_100%] [-webkit-mask-size:200%_100%] animate-wipe-x text-6xl font-extrabold mb-6"
+            >
+              <h1 className="text-transparent text-center bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-indigo-600 text-4xl lg:text-6xl font-extrabold mb-2 animate-gradient-x[mask-image:linear-gradient(90deg,transparent_0%,#000_80%,#000_150%,transparent_200%)]">
+                Kodedev
+              </h1>
+              <div className="text-2xl lg:text-5xl 2xl:text-6xl font-extrabold text-white leading-tight lg:mb-6 mb-2">
+                <div className="flex justify-center w-full">
+                  <span className="relative text-center">
+                    <span className="relative z-10 text-white bg-clip-text">
+                      Full-stack developer
+                    </span>
+                    <span className="absolute bottom-0 left-0 w-full h-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg opacity-70 transform -translate-y-1 hidden lg:block"></span>
+                  </span>
                 </div>
               </div>
             </div>
 
-            <p className="text-gray-300 text-base border-t border-gray-700 pt-4 mt-4">
-              Con{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 font-semibold">
-                2 años
-              </span>{" "}
-              de experiencia académica me especializo en desarrollar interfaces
-              modernas, responsivas y funcionales.
-            </p>
-          </motion.div>
+            <motion.p
+              variants={fadeIn}
+              custom={1}
+              className=" text-white md:text-xl text-[14px] mb-4 text-center lg:flex lg:items-center lg:justify-center lg:gap-2"
+            >
+              Soy
+              <span className="font-bold text-xl lg:text-xl mx-2 lg:mx-0.1 bg-clip-text lg:animate-none text-transparent bg-gradient-to-r from-blue-400 to-purple-500 inline-block">
+                Javier Pedrote Molina
+              </span>
+              <span className="text-white md:text-xl inline-block">
+                apasionado por la creación de experiencias digitales fluidas y
+                atractivas.
+              </span>
+            </motion.p>
+
+            <motion.p
+              variants={fadeIn}
+              custom={3}
+              className="mx-auto lg:mx-0 text-gray-300 lg:ml-24 text-lg italic"
+            ></motion.p>
+          </div>
         </motion.div>
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-center w-full h-full lg:h-auto mb-8 lg:mb-0 ">
+          {/* tecnologias*/}
+          <motion.div
+            variants={fadeIn}
+            initial="hidden"
+            animate="show"
+            className="w-full lg:w-1/2 text-center lg:text-left lg:mt-0 animate-rocket-image"
+          >
+            <motion.div
+              variants={fadeIn}
+              custom={4}
+              className="space-y-6 mt-10 lg:ml-24 text-left bg-gray-800/50 p-6 rounded-xl backdrop-blur-sm border border-gray-700/50 shadow-xl"
+            >
+              <h2 className="text-xl lg:text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+                Habilidades principales
+              </h2>
+
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 ">
+                <div className="bg-gray-800/80 p-3 rounded-lg border border-blue-500/30 hover:border-blue-500/60 transition-all hover:shadow-md hover:shadow-blue-500/20 group">
+                  <div className="text-blue-400 font-bold mb-1 group-hover:text-blue-300 transition-colors">
+                    HTML5 & CSS3
+                  </div>
+                  <div className="text-gray-400 text-sm">Maquetación web</div>
+                </div>
+
+                <div className="bg-gray-800/80 p-3 rounded-lg border border-purple-500/30 hover:border-purple-500/60 transition-all hover:shadow-md hover:shadow-purple-500/20 group">
+                  <div className="text-purple-400 font-bold mb-1 group-hover:text-purple-300 transition-colors">
+                    JavaScript
+                  </div>
+                  <div className="text-gray-400 text-sm">
+                    Desarrollo interactivo
+                  </div>
+                </div>
+
+                <div className="bg-gray-800/80 p-3 rounded-lg border border-indigo-500/30 hover:border-indigo-500/60 transition-all hover:shadow-md hover:shadow-indigo-500/20 group">
+                  <div className="text-indigo-400 font-bold mb-1 group-hover:text-indigo-300 transition-colors">
+                    TypeScript
+                  </div>
+                  <div className="text-gray-400 text-sm">Tipado estricto</div>
+                </div>
+
+                <div className="bg-gray-800/80 p-3 rounded-lg border border-cyan-500/30 hover:border-cyan-500/60 transition-all hover:shadow-md hover:shadow-cyan-500/20 group">
+                  <div className="text-cyan-400 font-bold mb-1 group-hover:text-cyan-300 transition-colors">
+                    Tailwind CSS
+                  </div>
+                  <div className="text-gray-400 text-sm">Diseño eficiente</div>
+                </div>
+
+                <div className="bg-gray-800/80 p-3 rounded-lg border border-blue-500/30 hover:border-blue-500/60 transition-all hover:shadow-md hover:shadow-blue-500/20 group">
+                  <div className="text-blue-400 font-bold mb-1 group-hover:text-blue-300 transition-colors">
+                    React
+                  </div>
+                  <div className="text-gray-400 text-sm">
+                    Interfaces modernas
+                  </div>
+                </div>
+
+                <div className="bg-gray-800/80 p-3 rounded-lg border border-red-500/30 hover:border-red-500/60 transition-all hover:shadow-md hover:shadow-red-500/20 group">
+                  <div className="text-red-400 font-bold mb-1 group-hover:text-red-300 transition-colors">
+                    Laravel
+                  </div>
+                  <div className="text-gray-400 text-sm">
+                    Backend y API REST
+                  </div>
+                </div>
+
+                <div className="bg-gray-800/80 p-3 rounded-lg border border-orange-500/30 hover:border-orange-500/60 transition-all hover:shadow-md hover:shadow-orange-500/20 group col-span-2 sm:col-span-1">
+                  <div className="text-orange-400 font-bold mb-1 group-hover:text-orange-300 transition-colors">
+                    Git
+                  </div>
+                  <div className="text-gray-400 text-sm">
+                    Control de versiones
+                  </div>
+                </div>
+              </div>
+
+              <p className="text-gray-300 text-base border-t border-gray-700 pt-4 mt-4">
+                Con{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 font-semibold">
+                  2 años
+                </span>{" "}
+                de experiencia académica me especializo en desarrollar
+                interfaces modernas, responsivas y funcionales.
+              </p>
+            </motion.div>
+          </motion.div>
 
           {/* Efecto 3D con Atropos - Lado derecho (imagen) */}
           <motion.div
-          className="w-full lg:w-1/2 flex justify-center items-center h-full lg:h-auto "
-          initial={{ opacity: 0, scale: 0.5 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 4, delay: 0.3 }}
-          viewport={{ once: true }}
-        >
-          <div className="relative w-full max-w-[500px] mx-auto hidden lg:block">
-            <Atropos
-              className="w-full h-[450px] lg:h-[600px] rounded-2xl overflow-hidden"
-              highlight={false}
-              shadow={false}
-              rotateXMax={5}
-              rotateYMax={5}
-              stretchZ={5}
-              activeOffset={40}
-              alwaysActive={false}
-              commonOrigin={true}
-              style={{ background: "transparent" }}
-            >
-              <img
-                src={heroImg}
-                alt="Fondo de programación"
-                className="w-full h-full object-contain absolute inset-0"
-                data-atropos-offset="-5"
-                loading="lazy"
-              />
-              <img
-                src={logo}
-                alt="Logo de Kodedev"
-                className="absolute top-12 right-6 w-28 h-28 object-contain"
-                data-atropos-offset="20"
-                loading="lazy"
-              />
-            </Atropos>
-          </div>
+            className="w-full lg:w-1/2 flex justify-center items-center h-full lg:h-auto "
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 2, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+            <div className="relative w-full max-w-[500px] mx-auto hidden lg:block">
+              <Atropos
+                className="w-full h-[450px] lg:h-[600px] rounded-2xl overflow-hidden"
+                highlight={false}
+                shadow={false}
+                rotateXMax={5}
+                rotateYMax={5}
+                stretchZ={5}
+                activeOffset={40}
+                alwaysActive={false}
+                commonOrigin={true}
+                style={{ background: "transparent" }}
+              >
+                <img
+                  src={heroImg}
+                  alt="Fondo de programación"
+                  className="w-full h-full object-contain absolute inset-0"
+                  data-atropos-offset="-5"
+                  loading="lazy"
+                />
+                <img
+                  src={logo}
+                  alt="Logo de Kodedev"
+                  className="absolute top-12 right-6 w-28 h-28 object-contain"
+                  data-atropos-offset="20"
+                  loading="lazy"
+                />
+              </Atropos>
+            </div>
 
-          {/* imagen movil */}
-          <div className="relative w-full max-w-[500px] mx-auto lg:hidden min-w-screen sm:min-w-[600px] px-2 md:px-0 animate-rocket-image">
+            {/* imagen movil */}
+            <div className="relative w-full max-w-[500px] mx-auto lg:hidden min-w-screen sm:min-w-[600px] px-2 md:px-0 animate-rocket-image">
               <img
                 src={heroImg}
                 alt="Fondo de programación"
@@ -240,16 +246,16 @@ export function Home() {
                 className="absolute -top-4 right-4 w-22 h-22 object-contain animate-pulse-xl animate-delayed-logo"
                 loading="lazy"
               />
-              
-          </div>
-        </motion.div>
-      </div>
-
-      
+            </div>
+          </motion.div>
+        </div>
       </div>
 
       {/* PROYECTOS */}
-      <div id="projects" className="mx-auto max-w-7xl px-6 lg:py-20 relative mb-10">
+      <div
+        id="projects"
+        className="mx-auto max-w-7xl px-6 lg:py-20 relative mb-10"
+      >
         {/* Decoración de fondo */}
         <div className="absolute top-40 left-1/2 transform -translate-x-1/2 w-[80%] h-40 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-full filter blur-3xl opacity-30 -z-10"></div>
 
