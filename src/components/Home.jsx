@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import "atropos/css";
 import Atropos from "atropos/react";
-import logo from "../assets/logo.png";
-import heroImg from "../assets/imgagen3.png";
+import logo from "../assets/logo34.webp";
+import heroImg from "../assets/imgagen3.webp";
 import img1 from "../assets/ImgProjecto1.webp";
 import img2 from "../assets/imgProjecto2.webp";
 import img3 from "../assets/imgProjecto3.webp";
