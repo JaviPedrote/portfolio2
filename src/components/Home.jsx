@@ -45,7 +45,7 @@ const fadeIn = {
 export function Home() {
   return (
 
-    <section className="relative isolate overflow-hidden bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900" id="home">
+    <section className="relative isolate overflow-hidden bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 lg:animate-rocket-image" id="home">
       {/* Fondo con efecto de partículas/grid */}
       <div
         aria-hidden
@@ -53,10 +53,10 @@ export function Home() {
       />
       <div className="absolute top-20 right-10 w-72 h-72 bg-purple-600/20 rounded-full filter blur-3xl opacity-20 animate-pulse"></div>
       <div className="absolute bottom-20 left-10 w-72 h-72 bg-blue-600/20 rounded-full filter blur-3xl opacity-20 animate-pulse delay-700"></div>
-      <div className="mx-auto px-4 flex flex-col items-center justify-between lg:px-6  mt-4 lg:mt-0 lg:py-24 pt-20 w-full">
+      <div className="mx-auto px-4 flex flex-col items-center justify-between lg:px-6  mt-4 lg:mt-0 lg:py-24 pt-20 w-full lg:animate-rocket-image">
 
         {/* Texto superior */}
-        <div>
+        <div className="animate-rocket-image">
           <div
             className="relative z-10 [-webkit-mask-image:linear-gradient(90deg,transparent_0%,#000_30%,#000_70%,transparent_100%)]
           [mask-size:200%_100%] [-webkit-mask-size:200%_100%] animate-wipe-x text-6xl font-extrabold mb-6"
@@ -103,14 +103,14 @@ export function Home() {
          
           </motion.p>
         </div>
-        <div className="flex flex-col-reverse lg:flex-row items-center justify-center w-full h-full lg:h-auto mb-8 lg:mb-0">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-center w-full h-full lg:h-auto mb-8 lg:mb-0 ">
 
         {/* tecnologias*/}
         <motion.div
           variants={fadeIn}
           initial="hidden"
           animate="show"
-          className="w-full lg:w-1/2 text-center lg:text-left lg:mt-0 "
+          className="w-full lg:w-1/2 text-center lg:text-left lg:mt-0 animate-rocket-image"
         >
           <motion.div
             variants={fadeIn}
@@ -189,10 +189,10 @@ export function Home() {
 
           {/* Efecto 3D con Atropos - Lado derecho (imagen) */}
           <motion.div
-          className="w-full lg:w-1/2 flex justify-center items-center h-full lg:h-auto"
-          initial={{ opacity: 0, scale: 0.9 }}
+          className="w-full lg:w-1/2 flex justify-center items-center h-full lg:h-auto "
+          initial={{ opacity: 0, scale: 0.5 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 4, delay: 0.3 }}
           viewport={{ once: true }}
         >
           <div className="relative w-full max-w-[500px] mx-auto hidden lg:block">
