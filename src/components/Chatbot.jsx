@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { FaRobot, FaTimes, FaPaperPlane } from 'react-icons/fa';
+import { FaRobot, FaTimes, FaPaperPlane, FaTrash } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
 
@@ -36,6 +36,16 @@ const Chatbot = () => {
   useEffect(() => {
     scrollToBottom();
   }, [messages, isLoading]);
+
+  // Función para limpiar la conversación
+  const clearConversation = () => {
+    setMessages([
+      { 
+        role: 'assistant', 
+        content: '¡Hola! 👋 Soy el asistente virtual de **Javier Pedrote**. Puedo contarte sobre sus proyectos, habilidades y experiencia. ¿Qué te gustaría saber?' 
+      }
+    ]);
+  };
 
   // Preguntas sugeridas
   const suggestedQuestions = [
@@ -245,12 +255,25 @@ const Chatbot = () => {
                     <p className="text-xs opacity-90">Online ahora</p>
                   </div>
                 </div>
-                <button
-                  onClick={() => setIsOpen(false)}
-                  className="w-6 h-6 flex items-center justify-center rounded-full hover:bg-white/20 transition-colors"
-                >
-                  <FaTimes size={12} />
-                </button>
+                <div className="flex items-center space-x-2">
+                  {/* Botón limpiar conversación */}
+                  <motion.button
+                    onClick={clearConversation}
+                    className="w-6 h-6 flex items-center justify-center rounded-full hover:bg-white/20 transition-colors"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    title="Limpiar conversación"
+                  >
+                    <FaTrash size={10} />
+                  </motion.button>
+                  {/* Botón cerrar */}
+                  <button
+                    onClick={() => setIsOpen(false)}
+                    className="w-6 h-6 flex items-center justify-center rounded-full hover:bg-white/20 transition-colors"
+                  >
+                    <FaTimes size={12} />
+                  </button>
+                </div>
               </div>
             </div>
 
