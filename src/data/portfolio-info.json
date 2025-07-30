@@ -2,83 +2,242 @@
   "personalInfo": {
     "nombre": "Javier Pedrote Molina",
     "alias": "Kodedev",
-    "profesion": "Full-stack Developer",
-    "experiencia": "2 años de experiencia académica",
+    "profesion": "Full-stack Developer & ML Engineer en formación",
+    "experiencia": "2 años de experiencia académica + trabajo actual en Beon",
     "ubicacion": "España",
     "email": "contacto disponible a través del portfolio",
-    "descripcion": "Desarrollador Full-stack apasionado por la creación de experiencias digitales fluidas y atractivas, especializado en desarrollo de interfaces modernas, responsivas y funcionales."
+    "descripcion": "Desarrollador Full-stack apasionado por la creación de experiencias digitales fluidas y atractivas, especializado en desarrollo de interfaces modernas, responsivas y funcionales. Actualmente expandiendo conocimientos hacia Machine Learning e Inteligencia Artificial.",
+    "trabajoActual": "Desarrollador en Beon - Aplicando conocimientos de desarrollo web en entorno profesional",
+    "formacionActual": "Cursando Máster en IA y Big Data para ML Engineer y Data Science Engineer",
+    "edad": "Joven desarrollador con gran motivación",
+    "objetivos": "Crear aplicaciones web innovadoras que resuelvan problemas reales y evolucionar hacia la intersección de desarrollo web e inteligencia artificial",
+    "personalidad": "Creativo, detallista, siempre aprendiendo nuevas tecnologías y manteniéndose al día con las tendencias del desarrollo web y la IA",
+    "motivacion": "La pasión por el desarrollo surge de la capacidad de transformar ideas en realidad digital, ahora expandiéndose hacia el análisis de datos y machine learning"
   },
   "habilidades": {
     "frontend": [
-      "HTML5 & CSS3 - Maquetación web",
-      "JavaScript - Desarrollo interactivo", 
-      "TypeScript - Tipado estricto",
-      "React - Interfaces modernas",
-      "Tailwind CSS - Diseño eficiente"
+      "HTML5 & CSS3 - Maquetación web semántica y responsiva",
+      "JavaScript (ES6+) - Desarrollo interactivo y dinámico", 
+      "TypeScript - Tipado estricto para aplicaciones escalables",
+      "React - Interfaces modernas con hooks y context",
+      "Tailwind CSS - Diseño eficiente y componentes reutilizables",
+      "Framer Motion - Animaciones fluidas y transiciones",
+      "React Router - Navegación SPA",
+      "Estado global - Context API y manejo de estado"
     ],
     "backend": [
-      "Laravel - Backend y API REST",
-      "PHP - Desarrollo servidor"
+      "Laravel - Framework PHP para APIs REST robustas",
+      "PHP - Desarrollo servidor y lógica de negocio",
+      "Node.js - Runtime para aplicaciones JavaScript en servidor",
+      "API REST - Diseño e implementación de servicios web",
+      "Autenticación - JWT, Passport y sistemas de login",
+      "Base de datos - MySQL y gestión de datos"
     ],
     "herramientas": [
-      "Git - Control de versiones",
-      "Vercel - Despliegue",
-      "Vite - Herramientas de desarrollo"
+      "Git - Control de versiones y colaboración",
+      "GitHub - Repositorios y CI/CD",
+      "Vercel - Despliegue y hosting de aplicaciones",
+      "Netlify - Hosting para proyectos frontend",
+      "Vite - Herramientas de desarrollo modernas",
+      "NPM/Yarn - Gestión de dependencias",
+      "VS Code - Entorno de desarrollo",
+      "Chrome DevTools - Debugging y optimización"
     ],
     "inteligenciaArtificial": [
       "Desarrollo de chatbots inteligentes",
       "Integración de APIs de IA (DeepSeek, OpenAI)",
       "Diseño de interfaces conversacionales",
       "Implementación de respuestas personalizadas",
-      "Formateo de respuestas con Markdown"
+      "Formateo de respuestas con Markdown",
+      "Prompt engineering para mejores respuestas",
+      "Integración frontend-backend con IA"
+    ],
+    "machineLearning": [
+      "Fundamentos de Machine Learning (en formación)",
+      "Data Science con Python (estudiando)",
+      "Big Data y análisis de datos (máster en curso)",
+      "Algoritmos de ML y redes neuronales (aprendiendo)",
+      "Procesamiento de datos masivos (formación académica)",
+      "MLOps y deployment de modelos (en desarrollo)"
+    ],
+    "diseño": [
+      "UI/UX - Diseño centrado en el usuario",
+      "Responsive Design - Adaptación a todos los dispositivos",
+      "Accesibilidad web - Cumplimiento de estándares WCAG",
+      "Prototipado - Wireframes y mockups",
+      "Design Systems - Componentes consistentes"
     ]
   },
   "proyectos": [
     {
       "nombre": "Sucer",
-      "descripcion": "Aplicación para comunicación entre tutores y alumnos con backend en Laravel con Passport y frontend en React",
-      "tecnologias": ["Laravel", "React", "Passport", "API REST"],
+      "descripcion": "Aplicación educativa completa para comunicación entre tutores y alumnos. Sistema de autenticación seguro con Laravel Passport, interfaz intuitiva desarrollada en React, y funcionalidades de mensajería en tiempo real.",
+      "tecnologias": ["Laravel", "React", "Passport", "API REST", "MySQL", "Tailwind CSS"],
       "url": "https://sucer-front.vercel.app/home",
-      "tipo": "Aplicación web educativa"
+      "tipo": "Aplicación web educativa",
+      "caracteristicas": [
+        "Sistema de autenticación con roles (tutor/alumno)",
+        "Dashboard personalizado para cada tipo de usuario",
+        "Mensajería en tiempo real",
+        "Gestión de cursos y materiales",
+        "API REST completa con Laravel",
+        "Interfaz responsiva y moderna"
+      ],
+      "desafios": "Integración segura entre frontend y backend, manejo de autenticación con tokens, diseño de base de datos relacional"
     },
     {
       "nombre": "Heroes App",
-      "descripcion": "Aplicación para explorar héroes de Marvel y DC Comics",
-      "tecnologias": ["React", "JavaScript", "API REST"],
+      "descripcion": "Aplicación interactiva para explorar el universo de héroes de Marvel y DC Comics. Consumo de APIs externas, búsqueda avanzada, y navegación fluida entre personajes.",
+      "tecnologias": ["React", "JavaScript", "API REST", "React Router", "CSS Modules"],
       "url": "https://heroes-hooks.vercel.app/",
-      "tipo": "Aplicación de entretenimiento"
+      "tipo": "Aplicación de entretenimiento",
+      "caracteristicas": [
+        "Búsqueda de héroes por nombre",
+        "Filtrado por universo (Marvel/DC)",
+        "Rutas dinámicas para cada héroe",
+        "Diseño responsivo y atractivo",
+        "Navegación intuitiva",
+        "Manejo de estado con hooks"
+      ],
+      "desafios": "Optimización de llamadas a API, manejo eficiente del estado, implementación de rutas protegidas"
     },
     {
       "nombre": "Ecommerce",
-      "descripcion": "Tienda online completa con carrito de compras y gestión de productos",
-      "tecnologias": ["React", "JavaScript", "CSS"],
+      "descripcion": "Tienda online completa con carrito de compras, gestión de productos, y experiencia de usuario fluida. Implementación de todas las funcionalidades esenciales de un e-commerce moderno.",
+      "tecnologias": ["React", "JavaScript", "CSS", "Context API", "Local Storage"],
       "url": "https://delicate-jalebi-4f6537.netlify.app/",
-      "tipo": "Comercio electrónico"
+      "tipo": "Comercio electrónico",
+      "caracteristicas": [
+        "Catálogo de productos dinámico",
+        "Carrito de compras persistente",
+        "Cálculo automático de totales",
+        "Filtros y búsqueda de productos",
+        "Responsive design",
+        "Persistencia de datos en localStorage"
+      ],
+      "desafios": "Manejo de estado complejo del carrito, persistencia de datos, optimización de rendimiento"
     },
     {
       "nombre": "Calculadora de Propinas",
-      "descripcion": "Calculadora de propinas desarrollada con TypeScript para práctica de tipado",
-      "tecnologias": ["TypeScript", "React", "CSS"],
+      "descripcion": "Herramienta práctica para calcular propinas desarrollada con TypeScript. Enfoque en tipado fuerte, validación de datos y experiencia de usuario intuitiva.",
+      "tecnologias": ["TypeScript", "React", "CSS", "Validación de formularios"],
       "url": "https://react-propinas-ts.vercel.app/",
-      "tipo": "Herramienta utilitaria"
+      "tipo": "Herramienta utilitaria",
+      "caracteristicas": [
+        "Cálculo automático de propinas",
+        "Múltiples porcentajes predefinidos",
+        "Validación de entrada en tiempo real",
+        "Tipado estricto con TypeScript",
+        "Interfaz limpia y funcional",
+        "Responsive para uso móvil"
+      ],
+      "desafios": "Implementación completa con TypeScript, validación robusta de datos, manejo de edge cases"
+    },
+    {
+      "nombre": "Portfolio Personal (Este proyecto)",
+      "descripcion": "Portfolio personal con chatbot de IA integrado. Combina diseño moderno, animaciones fluidas y un asistente virtual personalizado que responde preguntas sobre experiencia y proyectos.",
+      "tecnologias": ["React", "Vite", "Tailwind CSS", "Framer Motion", "DeepSeek AI", "Vercel"],
+      "url": "Tu portfolio actual",
+      "tipo": "Portfolio profesional",
+      "caracteristicas": [
+        "Chatbot inteligente con IA personalizada",
+        "Animaciones con Framer Motion",
+        "Diseño completamente responsivo",
+        "API serverless en Vercel",
+        "Interfaz moderna y atractiva",
+        "SEO optimizado"
+      ],
+      "desafios": "Integración de IA, implementación de chat en tiempo real, optimización de rendimiento, diseño UX/UI"
     }
   ],
   "educacion": [
-    "Formación académica en desarrollo web",
-    "Especialización en tecnologías Frontend y Backend",
-    "Práctica continua con proyectos personales"
+    "Formación académica en desarrollo web full-stack",
+    "Máster en IA y Big Data para ML Engineer y Data Science Engineer (cursando actualmente)",
+    "Especialización en tecnologías Frontend (React, TypeScript, CSS moderno)",
+    "Especialización en tecnologías Backend (Laravel, PHP, APIs REST)",
+    "Formación avanzada en Machine Learning y análisis de datos",
+    "Estudios en algoritmos de IA y redes neuronales",
+    "Práctica continua con proyectos personales y reales",
+    "Aprendizaje autodidacta de nuevas tecnologías y frameworks",
+    "Cursos especializados en UI/UX y experiencia de usuario",
+    "Formación en integración de inteligencia artificial",
+    "Participación en comunidades de desarrolladores y data science"
   ],
+  "experiencia": {
+    "actual": "Desarrollador en Beon - Aplicando conocimientos de desarrollo web en entorno profesional real",
+    "academia": "2 años de formación intensiva en desarrollo web + Máster en IA y Big Data en curso",
+    "proyectos": "Más de 10 proyectos personales completados + proyectos profesionales en Beon",
+    "tecnologias": "Experiencia práctica con stack completo LAMP y MERN + iniciación en stack de Data Science",
+    "metodologias": "Desarrollo ágil, versionado con Git, deployment continuo, trabajo en equipo profesional",
+    "colaboracion": "Trabajo en equipo y proyectos colaborativos en entorno empresarial",
+    "aprendizaje": "Formación continua en ML/AI mientras mantengo desarrollo web activo"
+  },
   "servicios": [
-    "Desarrollo de aplicaciones web completas",
-    "Creación de interfaces de usuario modernas",
-    "Desarrollo de APIs REST",
-    "Integración frontend-backend",
-    "Optimización y deployment de aplicaciones"
+    "Desarrollo de aplicaciones web completas (frontend + backend)",
+    "Creación de interfaces de usuario modernas y responsivas",
+    "Desarrollo de APIs REST escalables y seguras",
+    "Integración frontend-backend con autenticación",
+    "Implementación de chatbots y soluciones de IA",
+    "Optimización de rendimiento y SEO",
+    "Deployment y hosting de aplicaciones",
+    "Mantenimiento y actualización de proyectos existentes",
+    "Consultoría en arquitectura de aplicaciones web",
+    "Diseño UX/UI centrado en el usuario"
   ],
+  "metodologias": {
+    "desarrollo": "Desarrollo ágil, componentes reutilizables, código limpio",
+    "testing": "Testing manual y validación de funcionalidades",
+    "versionado": "Git flow, commits semánticos, branching strategies",
+    "deployment": "CI/CD con Vercel y Netlify, environment variables",
+    "documentacion": "Documentación clara de código y APIs"
+  },
+  "fortalezas": [
+    "Resolución creativa de problemas técnicos",
+    "Atención al detalle en UI/UX",
+    "Capacidad de aprendizaje rápido de nuevas tecnologías",
+    "Código limpio y bien estructurado",
+    "Comunicación clara y documentación efectiva",
+    "Adaptabilidad a diferentes proyectos y tecnologías"
+  ],
+  "objetivosProfesionales": [
+    "Desarrollar aplicaciones web innovadoras que resuelvan problemas reales",
+    "Especializarse en la intersección entre desarrollo web e inteligencia artificial",
+    "Convertirse en ML Engineer y Data Science Engineer cualificado",
+    "Aplicar técnicas de IA y Big Data en proyectos web",
+    "Contribuir a proyectos de código abierto relacionados con IA",
+    "Formar parte de equipos multidisciplinares de desarrollo y data science",
+    "Crear productos digitales inteligentes que mejoren la experiencia de usuario"
+  ],
+  "tecnologiasEnAprendizaje": [
+    "Python para Data Science y Machine Learning",
+    "Pandas, NumPy y Scikit-learn para análisis de datos",
+    "TensorFlow y PyTorch para deep learning",
+    "Apache Spark y Hadoop para Big Data",
+    "Jupyter Notebooks para análisis exploratorio",
+    "SQL avanzado y bases de datos analíticas",
+    "MLOps y deployment de modelos ML",
+    "Next.js para aplicaciones React avanzadas",
+    "Node.js para backend con JavaScript",
+    "Bases de datos NoSQL (MongoDB)",
+    "Docker para contenedores y microservicios",
+    "Testing automatizado (Jest, React Testing Library)",
+    "GraphQL como alternativa a REST"
+  ],
+  "filosofiaDeTrabajo": {
+    "codigo": "Código limpio, mantenible y bien documentado",
+    "usuario": "Siempre pensando en la experiencia del usuario final",
+    "aprendizaje": "Aprendizaje continuo y adaptación a nuevas tecnologías",
+    "colaboracion": "Comunicación clara y trabajo en equipo efectivo",
+    "calidad": "Preferencia por la calidad sobre la velocidad"
+  },
   "contacto": {
     "mensaje": "Puedes contactarme a través de este portfolio o visitar mis proyectos en los enlaces proporcionados",
-    "disponibilidad": "Disponible para proyectos freelance y colaboraciones",
+    "disponibilidad": "Actualmente trabajando en Beon, disponible para colaboraciones y proyectos freelance",
     "email": "contacto disponible a través del pedrote3.1416@gmail.com",
-    "telefono": "Número de contacto 608552436"
+    "telefono": "Número de contacto 608552436",
+    "respuesta": "Respondo rápidamente a consultas y propuestas de trabajo",
+    "ubicacion": "España - Disponible para trabajo remoto",
+    "idiomas": "Español nativo, inglés técnico para documentación",
+    "situacionActual": "Desarrollador en Beon + estudiante de Máster en IA y Big Data"
   }
 }

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { FaRobot, FaTimes, FaPaperPlane } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
@@ -14,18 +14,28 @@ const Chatbot = () => {
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const messagesEndRef = useRef(null);
 
   // Efecto para mostrar la burbuja cada 5 segundos
   useEffect(() => {
     if (!isOpen) {
       const interval = setInterval(() => {
         setShowBubble(true);
-        setTimeout(() => setShowBubble(false), 2200000); // La burbuja se oculta después de 3 segundos
-      }, 1000);
+        setTimeout(() => setShowBubble(false), 2000); // La burbuja se oculta después de 3 segundos
+      }, 6000);
 
       return () => clearInterval(interval);
     }
   }, [isOpen]);
+
+  // Efecto para scroll automático al final de la conversación
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages, isLoading]);
 
   // Preguntas sugeridas
   const suggestedQuestions = [
@@ -35,8 +45,55 @@ const Chatbot = () => {
     "¿Cómo puedo contactarlo?"
   ];
 
-  const handleSuggestedQuestion = (question) => {
-    setInput(question);
+  const handleSuggestedQuestion = async (question) => {
+    if (isLoading) return;
+    
+    const userMessage = { role: 'user', content: question };
+    const updatedMessages = [...messages, userMessage];
+    setMessages(updatedMessages);
+    setInput('');
+    setIsLoading(true);
+
+    try {
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ messages: updatedMessages }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        console.error('Error response:', errorData);
+        throw new Error(`HTTP error! status: ${response.status} - ${errorData.error || 'Unknown error'}`);
+      }
+
+      const data = await response.json();
+      
+      if (!data.choices || !data.choices[0] || !data.choices[0].message) {
+        throw new Error('Invalid response structure from API');
+      }
+      
+      const assistantMessage = data.choices[0].message;
+      setMessages(prevMessages => [...prevMessages, assistantMessage]);
+
+    } catch (error) {
+      console.error('Error al contactar con el chatbot:', error);
+      
+      let errorContent = 'Lo siento, algo salió mal. Por favor, inténtalo de nuevo.';
+      
+      if (error.message.includes('Failed to fetch')) {
+        errorContent = 'Error de conexión. Verifica tu conexión a internet.';
+      } else if (error.message.includes('401')) {
+        errorContent = 'Error de autenticación con el servicio.';
+      } else if (error.message.includes('500')) {
+        errorContent = 'Error del servidor. Inténtalo más tarde.';
+      }
+      
+      const errorMessage = { role: 'assistant', content: errorContent };
+      setMessages(prevMessages => [...prevMessages, errorMessage]);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -170,7 +227,7 @@ const Chatbot = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed bottom-16 right-2 w-72 h-81 sm:bottom-20 sm:right-6 sm:w-80 sm:h-96 bg-white rounded-2xl shadow-2xl z-50 border border-gray-200 overflow-hidden"
+            className="fixed bottom-16 right-2 w-72 h-81 sm:bottom-26 sm:right-6 sm:w-80 sm:h-96 bg-white rounded-2xl shadow-2xl z-50 border border-gray-200 overflow-hidden"
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
@@ -270,9 +327,10 @@ const Chatbot = () => {
                     <motion.button
                       key={index}
                       onClick={() => handleSuggestedQuestion(question)}
-                      className="block w-full text-left p-2 text-xs bg-blue-50 hover:bg-blue-100 text-blue-700 rounded-lg border border-blue-200 transition-colors"
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
+                      disabled={isLoading}
+                      className="block w-full text-left p-2 text-xs bg-blue-50 hover:bg-blue-100 text-blue-700 rounded-lg border border-blue-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                      whileHover={{ scale: isLoading ? 1 : 1.02 }}
+                      whileTap={{ scale: isLoading ? 1 : 0.98 }}
                     >
                       {question}
                     </motion.button>
@@ -295,6 +353,9 @@ const Chatbot = () => {
                   </div>
                 </motion.div>
               )}
+              
+              {/* Referencia para scroll automático */}
+              <div ref={messagesEndRef} />
             </div>
 
             {/* Input */}
