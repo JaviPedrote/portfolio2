@@ -134,13 +134,16 @@
       "desafios": "Implementación completa con TypeScript, validación robusta de datos, manejo de edge cases"
     },
     {
-      "nombre": "Portfolio Personal (Este proyecto)",
-      "descripcion": "Portfolio personal con chatbot de IA integrado. Combina diseño moderno, animaciones fluidas y un asistente virtual personalizado que responde preguntas sobre experiencia y proyectos.",
+      "nombre": "Portfolio Personal con Chatbot IA",
+      "descripcion": "Este mismo portfolio que estás navegando ahora. Incluye un chatbot de IA integrado (el asistente con el que estás hablando) que responde preguntas sobre mi experiencia, proyectos y habilidades. Combina diseño moderno, animaciones fluidas y tecnología de inteligencia artificial.",
       "tecnologias": ["React", "Vite", "Tailwind CSS", "Framer Motion", "DeepSeek AI", "Vercel"],
-      "url": "Tu portfolio actual",
+      "url": "Este mismo sitio web que estás visitando ahora",
       "tipo": "Portfolio profesional",
       "caracteristicas": [
-        "Chatbot inteligente con IA personalizada",
+        "Chatbot inteligente con IA personalizada (este mismo asistente que estás usando)",
+        "Scroll automático en conversaciones",
+        "Preguntas sugeridas con envío directo",
+        "Botón para limpiar conversación",
         "Animaciones con Framer Motion",
         "Diseño completamente responsivo",
         "API serverless en Vercel",
