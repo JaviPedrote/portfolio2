@@ -249,6 +249,7 @@ export function Home() {
             </div>
           </motion.div>
         </div>
+        {/* El chatbot ahora es flotante y no afecta el layout */}
       </div>
 
       {/* PROYECTOS */}

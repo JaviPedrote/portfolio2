@@ -1,5 +1,6 @@
 import { Navbar } from "./components/Navbar";
 import { Home } from "./components/Home";
+import Chatbot from "./components/Chatbot";
 
 function App() {
   return (
@@ -8,6 +9,8 @@ function App() {
         <main>
         <Home />
       </main>
+      {/* Chatbot flotante - no afecta el layout */}
+      <Chatbot />
     </div>
   );
 }
