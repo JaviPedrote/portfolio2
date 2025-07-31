@@ -15,6 +15,7 @@ const Chatbot = () => {
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
+  const chatContainerRef = useRef(null);
 
   // Efecto para mostrar la burbuja cada 5 segundos
   useEffect(() => {
@@ -36,6 +37,90 @@ const Chatbot = () => {
   useEffect(() => {
     scrollToBottom();
   }, [messages, isLoading]);
+
+  // Efecto para bloquear/desbloquear el scroll de la página cuando se abre/cierra el chat
+  useEffect(() => {
+    if (isOpen) {
+      // Bloquear scroll del body
+      document.body.style.overflow = 'hidden';
+    } else {
+      // Restaurar scroll del body
+      document.body.style.overflow = 'unset';
+    }
+
+    // Cleanup: asegurarse de restaurar el scroll al desmontar el componente
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
+  // Efecto para ocultar la scrollbar vertical pero mantener funcionalidad
+  useEffect(() => {
+    // Aplicar estilos CSS para ocultar solo la scrollbar vertical
+    const style = document.createElement('style');
+    style.id = 'hide-vertical-scrollbar';
+    style.textContent = `
+      html {
+        overflow-y: scroll;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
+      }
+      html::-webkit-scrollbar {
+        width: 0px;
+        background: transparent; /* Chrome/Safari */
+      }
+      html::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      html::-webkit-scrollbar-thumb {
+        background: transparent;
+      }
+      /* Mantener scrollbar horizontal */
+      html::-webkit-scrollbar:horizontal {
+        height: 12px;
+      }
+      html::-webkit-scrollbar-track:horizontal {
+        background: #f1f1f1;
+      }
+      html::-webkit-scrollbar-thumb:horizontal {
+        background: #888;
+        border-radius: 6px;
+      }
+      html::-webkit-scrollbar-thumb:horizontal:hover {
+        background: #555;
+      }
+    `;
+    
+    // Solo añadir si no existe ya
+    if (!document.getElementById('hide-vertical-scrollbar')) {
+      document.head.appendChild(style);
+    }
+
+    // Cleanup al desmontar el componente
+    return () => {
+      const existingStyle = document.getElementById('hide-vertical-scrollbar');
+      if (existingStyle) {
+        document.head.removeChild(existingStyle);
+      }
+    };
+  }, []);
+
+  // Efecto para cerrar el chat al hacer clic fuera de él
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isOpen && chatContainerRef.current && !chatContainerRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen]);
 
   // Función para limpiar la conversación
   const clearConversation = () => {
@@ -234,13 +319,25 @@ const Chatbot = () => {
       {/* Ventana de chat */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            className="fixed bottom-18 right-2 w-72 h-81 sm:bottom-26 sm:right-6 sm:w-80 sm:h-96 bg-white rounded-2xl shadow-2xl z-50 border border-gray-200 overflow-hidden"
-            initial={{ opacity: 0, scale: 0.8, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.8, y: 20 }}
-            transition={{ type: "spring", stiffness: 300, damping: 30 }}
-          >
+          <>
+            {/* Overlay de fondo */}
+            <motion.div
+              className="fixed inset-0 bg-black/50 z-40"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+            />
+            
+            {/* Contenedor del chat */}
+            <motion.div
+              ref={chatContainerRef}
+              className="fixed bottom-18 right-2 w-72 h-81 sm:bottom-26 sm:right-6 sm:w-80 sm:h-96 bg-gray-900 rounded-2xl shadow-2xl z-50 border border-gray-700 overflow-hidden"
+              initial={{ opacity: 0, scale: 0.8, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.8, y: 20 }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            >
             {/* Header */}
             <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-4 text-white">
               <div className="flex items-center justify-between">
@@ -276,7 +373,7 @@ const Chatbot = () => {
             </div>
 
             {/* Messages */}
-            <div className="flex-1 p-3 sm:p-4 overflow-y-auto bg-gray-50 h-52 sm:h-64">
+            <div className="flex-1 p-3 sm:p-4 overflow-y-auto bg-gray-800 h-52 sm:h-64">
               {messages.map((msg, index) => (
                 <motion.div
                   key={index}
@@ -289,7 +386,7 @@ const Chatbot = () => {
                     className={`max-w-[85%] p-3 rounded-2xl text-sm ${
                       msg.role === 'user' 
                         ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-br-md' 
-                        : 'bg-white text-gray-800 shadow-sm border border-gray-100 rounded-bl-md'
+                        : 'bg-gray-700 text-gray-100 shadow-sm border border-gray-600 rounded-bl-md'
                     }`}
                   >
                     {msg.role === 'assistant' ? (
@@ -307,10 +404,10 @@ const Chatbot = () => {
                               </a>
                             ),
                             strong: ({ children }) => (
-                              <strong className="font-semibold text-gray-900">{children}</strong>
+                              <strong className="font-semibold text-gray-200">{children}</strong>
                             ),
                             h3: ({ children }) => (
-                              <h3 className="font-semibold text-gray-900 text-sm mt-2 mb-1">{children}</h3>
+                              <h3 className="font-semibold text-gray-200 text-sm mt-2 mb-1">{children}</h3>
                             ),
                             ul: ({ children }) => (
                               <ul className="list-none space-y-1 mt-2">{children}</ul>
@@ -343,13 +440,13 @@ const Chatbot = () => {
                   animate={{ opacity: 1, y: 0 }}
                   className="space-y-2 mt-2"
                 >
-                  <p className="text-xs text-gray-500 mb-2">Preguntas sugeridas:</p>
+                  <p className="text-xs text-gray-400 mb-2">Preguntas sugeridas:</p>
                   {suggestedQuestions.map((question, index) => (
                     <motion.button
                       key={index}
                       onClick={() => handleSuggestedQuestion(question)}
                       disabled={isLoading}
-                      className="block w-full text-left p-2 text-xs bg-blue-50 hover:bg-blue-100 text-blue-700 rounded-lg border border-blue-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="block w-full text-left p-2 text-xs bg-gray-700 hover:bg-gray-600 text-gray-200 rounded-lg border border-gray-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                       whileHover={{ scale: isLoading ? 1 : 1.02 }}
                       whileTap={{ scale: isLoading ? 1 : 0.98 }}
                     >
@@ -365,7 +462,7 @@ const Chatbot = () => {
                   animate={{ opacity: 1 }}
                   className="flex justify-start mb-3"
                 >
-                  <div className="bg-white p-3 rounded-2xl rounded-bl-md shadow-sm border border-gray-100">
+                  <div className="bg-gray-700 p-3 rounded-2xl rounded-bl-md shadow-sm border border-gray-600">
                     <div className="flex space-x-1">
                       <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
                       <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
@@ -380,14 +477,14 @@ const Chatbot = () => {
             </div>
 
             {/* Input */}
-            <form onSubmit={handleSubmit} className="p-0.5 sm:p-2 bg-white border-t border-gray-200">
+            <form onSubmit={handleSubmit} className="p-0.5 sm:p-2 bg-gray-900 border-t border-gray-700">
               <div className="flex space-x-2">
                 <input
                   type="text"
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   placeholder="Pregúntame sobre Javier..."
-                  className="flex-1 px-3 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+                  className="flex-1 px-3 py-2 border border-gray-600 bg-gray-800 text-gray-200 placeholder-gray-400 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
                   disabled={isLoading}
                 />
                 <motion.button
@@ -402,6 +499,7 @@ const Chatbot = () => {
               </div>
             </form>
           </motion.div>
+          </>
         )}
       </AnimatePresence>
     </>
