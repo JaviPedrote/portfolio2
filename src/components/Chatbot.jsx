@@ -225,8 +225,6 @@ const Chatbot = () => {
                 className="relative"
               >
                 <FaRobot size={16} className="sm:w-5 sm:h-5" />
-                {/* Indicador de pulso */}
-                <div className="absolute -top-0.5 -right-0.5 sm:-top-1 sm:-right-1 w-2.5 h-2.5 sm:w-3 sm:h-3 bg-green-400 rounded-full animate-pulse"></div>
               </motion.div>
             )}
           </AnimatePresence>
@@ -237,7 +235,7 @@ const Chatbot = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed bottom-16 right-2 w-72 h-81 sm:bottom-26 sm:right-6 sm:w-80 sm:h-96 bg-white rounded-2xl shadow-2xl z-50 border border-gray-200 overflow-hidden"
+            className="fixed bottom-18 right-2 w-72 h-81 sm:bottom-26 sm:right-6 sm:w-80 sm:h-96 bg-white rounded-2xl shadow-2xl z-50 border border-gray-200 overflow-hidden"
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}

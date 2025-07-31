@@ -21,31 +21,31 @@ app.post('/api/chat', async (req, res) => {
     return res.status(400).json({ error: 'Mensaje es requerido' });
   }
 
-  const apiKey = process.env.DEEPSEEK_API_KEY;
+  const apiKey = process.env.OPENAI_API_KEY;
   console.log('API Key found:', !!apiKey);
   console.log('API Key length:', apiKey?.length);
 
   if (!apiKey) {
-    console.error('DEEPSEEK_API_KEY not found');
+    console.error('OPENAI_API_KEY not found');
     return res.status(500).json({ 
       error: 'API key not configured',
       debug: {
-        envKeys: Object.keys(process.env).filter(key => key.includes('DEEP'))
+        envKeys: Object.keys(process.env).filter(key => key.includes('OPENAI'))
       }
     });
   }
 
   try {
-    console.log('Enviando petición a DeepSeek...');
+    console.log('Enviando petición a OpenAI...');
     
-    const response = await fetch('https://api.deepseek.com/chat/completions', {
+    const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        model: 'deepseek-chat',
+        model: 'gpt-3.5-turbo',
         messages: messages,
         max_tokens: 1000,
         temperature: 0.7,
@@ -55,10 +55,10 @@ app.post('/api/chat', async (req, res) => {
     const data = await response.json();
 
     if (response.ok) {
-      console.log('Respuesta exitosa de DeepSeek');
+      console.log('Respuesta exitosa de OpenAI');
       res.json(data);
     } else {
-      console.error('Error de DeepSeek:', data);
+      console.error('Error de OpenAI:', data);
       res.status(response.status).json(data);
     }
   } catch (error) {

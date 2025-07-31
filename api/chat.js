@@ -38,17 +38,20 @@ export default async function handler(req, res) {
 
   // En local, vercel dev usa un archivo .env.local para las variables
   // En producción, Vercel usa las variables configuradas en el dashboard
-  const apiKey = process.env.DEEPSEEK_API_KEY;
+  const apiKey = process.env.OPENAI_API_KEY;
+
+  console.log('API Key present:', !!apiKey);
+  console.log('API Key length:', apiKey ? apiKey.length : 0);
 
   if (!apiKey) {
-    console.error('DEEPSEEK_API_KEY not found in environment variables');
+    console.error('OPENAI_API_KEY not found in environment variables');
     return res.status(500).json({ 
       error: 'API key not configured'
     });
   }
 
   try {
-    console.log('Sending request to DeepSeek API...');
+    console.log('Sending request to OpenAI API...');
     
     // Crear un prompt personalizado con la información del portfolio
     const systemPrompt = {
@@ -86,27 +89,27 @@ EJEMPLO DE FORMATO ESPERADO:
     // Añadir el prompt del sistema al inicio de los mensajes
     const messagesWithContext = [systemPrompt, ...messages];
     
-    const response = await fetch('https://api.deepseek.com/chat/completions', {
+    const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        model: 'deepseek-chat',
+        model: 'gpt-4o-mini',
         messages: messagesWithContext,
         max_tokens: 500,
-        temperature: 0.7,
+        temperature: 0.8,
       }),
     });
 
     const data = await response.json();
 
     if (response.ok) {
-      console.log('Success response from DeepSeek API');
+      console.log('Success response from OpenAI API');
       res.status(200).json(data);
     } else {
-      console.error('Error from DeepSeek API:', data);
+      console.error('Error from OpenAI API:', data);
       res.status(response.status).json(data);
     }
 
