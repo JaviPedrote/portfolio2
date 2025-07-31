@@ -31,7 +31,8 @@
       "Node.js - Runtime para aplicaciones JavaScript en servidor",
       "API REST - Diseño e implementación de servicios web",
       "Autenticación - JWT, Passport y sistemas de login",
-      "Base de datos - MySQL y gestión de datos"
+      "Base de datos - MySQL y gestión de datos",
+      "Implementación de pasarelas de pago - Stripe y sistemas de pago seguros"
     ],
     "herramientas": [
       "Git - Control de versiones y colaboración",
@@ -50,7 +51,8 @@
       "Implementación de respuestas personalizadas",
       "Formateo de respuestas con Markdown",
       "Prompt engineering para mejores respuestas",
-      "Integración frontend-backend con IA"
+      "Integración frontend-backend con IA",
+      "Implementación con OpenAI GPT para aplicaciones inteligentes"
     ],
     "machineLearning": [
       "Fundamentos de Machine Learning (en formación)",
@@ -136,7 +138,7 @@
     {
       "nombre": "Portfolio Personal con Chatbot IA",
       "descripcion": "Este mismo portfolio que estás navegando ahora. Incluye un chatbot de IA integrado (el asistente con el que estás hablando) que responde preguntas sobre mi experiencia, proyectos y habilidades. Combina diseño moderno, animaciones fluidas y tecnología de inteligencia artificial.",
-      "tecnologias": ["React", "Vite", "Tailwind CSS", "Framer Motion", "DeepSeek AI", "Vercel"],
+      "tecnologias": ["React", "Vite", "Tailwind CSS", "Framer Motion", "OpenAI", "Vercel"],
       "url": "Este mismo sitio web que estás visitando ahora",
       "tipo": "Portfolio profesional",
       "caracteristicas": [
@@ -181,6 +183,7 @@
     "Desarrollo de APIs REST escalables y seguras",
     "Integración frontend-backend con autenticación",
     "Implementación de chatbots y soluciones de IA",
+    "Integración de pasarelas de pago (Stripe) para e-commerce",
     "Optimización de rendimiento y SEO",
     "Deployment y hosting de aplicaciones",
     "Mantenimiento y actualización de proyectos existentes",
